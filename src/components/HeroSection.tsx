@@ -78,33 +78,33 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl"></div>
               <div className="relative space-y-6">
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-bold text-primary">Get Instant Quote</h3>
-                  <p className="text-muted-foreground">Professional service within 24 hours</p>
+                  <h3 className="text-2xl font-bold text-primary">Equipment We Service</h3>
+                  <p className="text-muted-foreground">Multi-vendor support & certified technicians</p>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="p-4 bg-primary/5 rounded-lg">
-                    <div className="text-2xl font-bold text-primary">3,000+</div>
-                    <div className="text-sm text-muted-foreground">Satisfied Customers</div>
+                    <div className="text-2xl font-bold text-primary">500+</div>
+                    <div className="text-sm text-muted-foreground">Instrument Models</div>
                   </div>
                   <div className="p-4 bg-secondary/5 rounded-lg">
                     <div className="text-2xl font-bold text-secondary">15+</div>
-                    <div className="text-sm text-muted-foreground">Years Experience</div>
+                    <div className="text-sm text-muted-foreground">OEM Brands</div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                    <span className="text-sm">Emergency Service</span>
-                    <Badge variant="secondary">24/7 Available</Badge>
+                    <span className="text-sm">HPLC/LC-MS Systems</span>
+                    <Badge variant="secondary">✓ Supported</Badge>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                    <span className="text-sm">Response Time</span>
-                    <Badge variant="secondary">Within 2 Hours</Badge>
+                    <span className="text-sm">GC & Spectrophotometers</span>
+                    <Badge variant="secondary">✓ Supported</Badge>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                    <span className="text-sm">Service Coverage</span>
-                    <Badge variant="secondary">Nationwide</Badge>
+                    <span className="text-sm">Incubators & Autoclaves</span>
+                    <Badge variant="secondary">✓ Supported</Badge>
                   </div>
                 </div>
               </div>
