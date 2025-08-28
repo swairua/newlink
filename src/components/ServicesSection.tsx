@@ -11,7 +11,11 @@ import {
   Microscope,
   Beaker,
   FlaskConical,
-  Thermometer
+  Thermometer,
+  Building2,
+  Hammer,
+  Zap,
+  HardHat
 } from "lucide-react";
 import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 import LearnMoreModal from "./modals/LearnMoreModal";
