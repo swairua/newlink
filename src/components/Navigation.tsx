@@ -24,7 +24,7 @@ const Navigation = () => {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
                 alt="Newlink Lab Services Ltd - Orchestrating Scientific Solutions"
-                className="h-20 w-auto object-contain"
+                className="h-32 w-auto object-contain"
               />
             </div>
           </div>
