@@ -11,7 +11,11 @@ import {
   Microscope,
   Beaker,
   FlaskConical,
-  Thermometer
+  Thermometer,
+  Building2,
+  Hammer,
+  Zap,
+  HardHat
 } from "lucide-react";
 import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 import LearnMoreModal from "./modals/LearnMoreModal";
@@ -113,6 +117,222 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Laboratory Construction & Fit-out Services */}
+        <div className="space-y-8 mb-16">
+          <div className="text-center space-y-4">
+            <Badge variant="outline" className="text-sm px-4 py-2">
+              Building & Construction
+            </Badge>
+            <h3 className="text-2xl md:text-3xl font-bold">
+              Laboratory Design, Construction & Fit-out
+            </h3>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Complete laboratory construction services from initial design to final fit-out,
+              ensuring compliance with industry standards and regulatory requirements.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <Building2 className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-lg">Lab Design & Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                  <li>• Custom laboratory layouts</li>
+                  <li>• Workflow optimization</li>
+                  <li>• Regulatory compliance design</li>
+                  <li>• 3D visualization & modeling</li>
+                </ul>
+                <LearnMoreModal
+                  trigger={
+                    <Button variant="outline" size="sm" className="w-full">
+                      Learn More
+                    </Button>
+                  }
+                  type="service"
+                  title="Laboratory Design & Planning"
+                  data={{
+                    title: "Laboratory Design & Planning",
+                    description: "Comprehensive laboratory design services ensuring optimal workflow and compliance",
+                    features: ["Custom laboratory layouts", "Workflow optimization", "Regulatory compliance design", "3D visualization & modeling"]
+                  }}
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <Hammer className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-lg">Construction & Build</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                  <li>• Complete lab construction</li>
+                  <li>• Cleanroom installations</li>
+                  <li>• Modular lab systems</li>
+                  <li>• Project management</li>
+                </ul>
+                <LearnMoreModal
+                  trigger={
+                    <Button variant="outline" size="sm" className="w-full">
+                      Learn More
+                    </Button>
+                  }
+                  type="service"
+                  title="Laboratory Construction & Build"
+                  data={{
+                    title: "Laboratory Construction & Build",
+                    description: "Professional laboratory construction services from foundation to completion",
+                    features: ["Complete lab construction", "Cleanroom installations", "Modular lab systems", "Project management"]
+                  }}
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <Zap className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-lg">Infrastructure Setup</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                  <li>• Electrical installations</li>
+                  <li>• Gas & vacuum systems</li>
+                  <li>• HVAC & ventilation</li>
+                  <li>• Water & waste systems</li>
+                </ul>
+                <LearnMoreModal
+                  trigger={
+                    <Button variant="outline" size="sm" className="w-full">
+                      Learn More
+                    </Button>
+                  }
+                  type="service"
+                  title="Laboratory Infrastructure Setup"
+                  data={{
+                    title: "Laboratory Infrastructure Setup",
+                    description: "Complete infrastructure installation for modern laboratory facilities",
+                    features: ["Electrical installations", "Gas & vacuum systems", "HVAC & ventilation", "Water & waste systems"]
+                  }}
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <HardHat className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-lg">Fit-out & Furnishing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                  <li>• Laboratory furniture</li>
+                  <li>• Fume hood installations</li>
+                  <li>• Safety equipment setup</li>
+                  <li>• Equipment positioning</li>
+                </ul>
+                <LearnMoreModal
+                  trigger={
+                    <Button variant="outline" size="sm" className="w-full">
+                      Learn More
+                    </Button>
+                  }
+                  type="service"
+                  title="Laboratory Fit-out & Furnishing"
+                  data={{
+                    title: "Laboratory Fit-out & Furnishing",
+                    description: "Complete laboratory fit-out services with custom furniture and safety equipment",
+                    features: ["Laboratory furniture", "Fume hood installations", "Safety equipment setup", "Equipment positioning"]
+                  }}
+                />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Construction Project Types */}
+        <div className="bg-gradient-to-r from-secondary/5 to-primary/5 rounded-2xl p-8 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-4">Laboratory Construction Projects</h3>
+            <p className="text-muted-foreground">
+              From research facilities to educational labs, we build state-of-the-art laboratory environments
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="relative group">
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/8000529/pexels-photo-8000529.jpeg"
+                  alt="Laboratory design and planning blueprints"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold text-lg">Design & Planning</h4>
+                  <p className="text-sm text-white/90">Custom laboratory layouts and workflow optimization</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/7518797/pexels-photo-7518797.jpeg"
+                  alt="Modern laboratory interior with equipment"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold text-lg">Equipment Installation</h4>
+                  <p className="text-sm text-white/90">Professional setup and commissioning</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/33603165/pexels-photo-33603165.jpeg"
+                  alt="Construction workers building laboratory"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold text-lg">Construction & Build</h4>
+                  <p className="text-sm text-white/90">Complete laboratory construction services</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {[
+              "Research Laboratories",
+              "Educational Labs",
+              "Quality Control Labs",
+              "Clean Rooms",
+              "Pharmaceutical Labs",
+              "Food Testing Labs",
+              "Environmental Labs",
+              "Microbiology Labs"
+            ].map((projectType, index) => (
+              <div key={index} className="p-3 bg-white rounded-lg shadow-sm border hover:shadow-md transition-all duration-300">
+                <div className="font-medium text-sm">{projectType}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Manufacturer Support */}
