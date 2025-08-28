@@ -1,5 +1,6 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const ImageGallerySection = () => {
   const galleryImages = [
@@ -83,18 +84,23 @@ const ImageGallerySection = () => {
               Contact our expert team for professional laboratory equipment service
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#contact" 
-                className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors"
-              >
-                Request Service Now
-              </a>
-              <a 
-                href="tel:+254780165490" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
-              >
-                🚨 Emergency: +254 780 165 490
-              </a>
+              <ServiceQuoteModal
+                trigger={
+                  <div className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors cursor-pointer">
+                    Request Service Now
+                  </div>
+                }
+                title="Service Request"
+              />
+              <ServiceQuoteModal
+                trigger={
+                  <div className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors cursor-pointer">
+                    🚨 Emergency: +254 780 165 490
+                  </div>
+                }
+                title="Emergency Service Request"
+                isEmergency={true}
+              />
             </div>
           </div>
         </div>

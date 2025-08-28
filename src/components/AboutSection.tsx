@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Target, Eye, Award, Users } from "lucide-react";
+import LearnMoreModal from "./modals/LearnMoreModal";
 
 const AboutSection = () => {
   return (
@@ -64,9 +65,28 @@ const AboutSection = () => {
               </Card>
             </div>
 
-            <Button variant="outline" size="lg">
-              Learn More About Our Services
-            </Button>
+            <LearnMoreModal
+              trigger={
+                <Button variant="outline" size="lg">
+                  Learn More About Our Services
+                </Button>
+              }
+              type="service"
+              title="About Newlink Lab Services"
+              data={{
+                title: "Professional Laboratory Services",
+                description: "Comprehensive equipment maintenance, repair, and support services",
+                icon: <Award className="w-8 h-8" />,
+                features: [
+                  "ISO 9001:2015 certified quality management",
+                  "GMP compliant documentation and procedures",
+                  "Multi-vendor equipment support",
+                  "24/7 emergency response service",
+                  "Certified and trained technicians",
+                  "Nationwide service coverage"
+                ]
+              }}
+            />
           </div>
 
           <div className="space-y-8">

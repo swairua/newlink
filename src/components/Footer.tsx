@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { Mail, MapPin, Clock } from "lucide-react";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -104,13 +105,18 @@ const Footer = () => {
                 <div className="font-bold text-lg text-white">+254 780 165 490</div>
                 <div className="text-xs text-red-100">Call for immediate response</div>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-full border-background/20 text-background hover:bg-background hover:text-foreground"
-              >
-                Request Service Quote
-              </Button>
+              <ServiceQuoteModal
+                trigger={
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full border-background/20 text-background hover:bg-background hover:text-foreground"
+                  >
+                    Request Service Quote
+                  </Button>
+                }
+                title="Service Quote Request"
+              />
             </div>
             <div className="text-sm text-background/70">
               <div className="font-medium text-red-400">Response: Within 2 Hours</div>
