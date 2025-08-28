@@ -30,32 +30,39 @@ const HeroSection = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">24/7 Emergency Service</span>
+                <span className="text-sm">Agilent, Shimadzu, Thermo, Waters</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">GMP Compliant Documentation</span>
+                <span className="text-sm">IQ/OQ/PQ Qualification Services</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">Multi-Brand Support</span>
+                <span className="text-sm">Response Within 2 Hours</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">ISO Quality Standards</span>
+                <span className="text-sm">Nationwide Coverage Kenya</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Request Service Now
+                🚨 Emergency Service Now
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                View Our Products
+                Request Quote
               </Button>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-6 border-t">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-primary" />
+                <div>
+                  <p className="text-sm text-muted-foreground">Emergency & Service</p>
+                  <p className="font-medium">+254 780 165 490</p>
+                </div>
+              </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <div>
