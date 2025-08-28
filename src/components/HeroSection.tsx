@@ -12,18 +12,18 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="secondary" className="text-sm px-4 py-2">
-                Professional Laboratory Services Since 2010
+                🚨 24/7 Emergency Service Available
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Laboratory Equipment
+                  Multi-Vendor Laboratory
                 </span>
                 <br />
-                <span className="text-foreground">Maintenance & Repair</span>
+                <span className="text-foreground">Equipment Service & Repair</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Professional maintenance and repair services for all brands and types of laboratory equipment. 
-                We specialize in scientific apparatus, industrial chemicals, and research equipment.
+                Fast, reliable maintenance and repair for HPLC, GC, LC-MS, spectrophotometers, incubators,
+                autoclaves and all laboratory instrumentation. Certified technicians dispatched within 2 hours.
               </p>
             </div>
 
