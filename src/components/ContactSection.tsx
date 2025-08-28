@@ -137,20 +137,40 @@ const ContactSection = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
+            <Card className="border-red-200 bg-red-50">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-3 text-red-700">
+                  <span className="text-2xl">🚨</span>
+                  <span>Emergency Hotline</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-red-600 mb-4 font-medium">
+                  Critical equipment failure? Call immediately for 2-hour response.
+                </p>
+                <div className="space-y-2">
+                  <div className="font-bold text-xl text-red-700">+254 780 165 490</div>
+                  <div className="text-sm text-red-600">Available 24/7 for emergencies</div>
+                </div>
+              </CardContent>
+            </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Mail className="w-6 h-6 text-primary" />
-                  <span>Email Us</span>
+                  <span>Email Support</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Send us an email and we'll respond within 24 hours.
+                  Send service requests and we'll respond within 2 hours.
                 </p>
                 <div className="space-y-2">
                   <div className="font-medium">info@newlinklabservices.co.ke</div>
-                  <div className="text-sm text-muted-foreground">General inquiries and support</div>
+                  <div className="text-sm text-muted-foreground">Service requests & general inquiries</div>
+                  <div className="font-medium text-red-600">emergency@newlinklabservices.co.ke</div>
+                  <div className="text-sm text-muted-foreground">Emergency service requests</div>
                 </div>
               </CardContent>
             </Card>
@@ -159,17 +179,17 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6 text-primary" />
-                  <span>Visit Our Office</span>
+                  <span>Service Coverage</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Come visit our office and laboratory for in-person consultations.
+                  Nationwide service coverage across Kenya with local technicians.
                 </p>
                 <div className="space-y-1">
-                  <div className="font-medium">Nairobi, Kenya</div>
+                  <div className="font-medium">P.O Box 36294-00200, Nairobi, Kenya</div>
                   <div className="text-sm text-muted-foreground">
-                    Professional laboratory services nationwide
+                    Serving labs nationwide: Nairobi, Mombasa, Kisumu, Eldoret
                   </div>
                 </div>
               </CardContent>
@@ -179,37 +199,26 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Clock className="w-6 h-6 text-primary" />
-                  <span>Service Hours</span>
+                  <span>Response Times</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Emergency Service</span>
-                    <span className="font-medium text-secondary">24/7 Available</span>
+                    <span className="text-muted-foreground">Emergency Response</span>
+                    <span className="font-medium text-red-600">Within 2 Hours</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Regular Hours</span>
-                    <span className="font-medium">Mon-Fri: 8:00 AM - 6:00 PM</span>
+                    <span className="text-muted-foreground">Routine Service</span>
+                    <span className="font-medium">Same/Next Day</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Weekend</span>
-                    <span className="font-medium">Sat: 9:00 AM - 2:00 PM</span>
+                    <span className="text-muted-foreground">Quote Response</span>
+                    <span className="font-medium">Within 4 Hours</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 text-white">
-              <h3 className="text-xl font-bold mb-2">Emergency Service</h3>
-              <p className="text-white/80 mb-4">
-                Need immediate assistance? Our emergency service team is available 24/7 
-                for critical laboratory equipment failures.
-              </p>
-              <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Call Emergency Service
-              </Button>
-            </div>
           </div>
         </div>
       </div>
