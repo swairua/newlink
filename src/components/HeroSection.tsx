@@ -74,9 +74,14 @@ const HeroSection = () => {
           </div>
 
           <div className="relative">
-            <div className="relative bg-card rounded-2xl shadow-2xl p-8 border">
+            <div className="relative bg-card rounded-2xl shadow-2xl overflow-hidden border">
+              <img
+                src="https://images.pexels.com/photos/8940355/pexels-photo-8940355.jpeg"
+                alt="Laboratory technician working on precision equipment"
+                className="w-full h-48 object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl"></div>
-              <div className="relative space-y-6">
+              <div className="relative p-8 space-y-6">
                 <div className="text-center space-y-2">
                   <h3 className="text-2xl font-bold text-primary">Equipment We Service</h3>
                   <p className="text-muted-foreground">Multi-vendor support & certified technicians</p>
