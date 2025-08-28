@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { 
-  Beaker, 
-  Microscope, 
-  FlaskConical, 
+import {
+  Beaker,
+  Microscope,
+  FlaskConical,
   Thermometer,
   TestTube,
   Zap,
@@ -15,6 +15,9 @@ import {
   Shield,
   ChevronRight
 } from "lucide-react";
+import LearnMoreModal from "./modals/LearnMoreModal";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
+import ContactModal from "./modals/ContactModal";
 
 const ProductsSection = () => {
   const [activeCategory, setActiveCategory] = useState("general");
@@ -89,17 +92,35 @@ const ProductsSection = () => {
   return (
     <section id="products" className="py-24 bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <Badge variant="secondary" className="text-sm px-4 py-2">
-            Our Products
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Comprehensive Laboratory Solutions
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We supply a wide range of laboratory equipment, chemicals, and instruments 
-            for research, medical, and industrial applications.
-          </p>
+        <div className="space-y-8 mb-16">
+          {/* Hero Image Section */}
+          <div className="relative rounded-3xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              <img
+                src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+                alt="Scientists in protective gear analyzing test tubes"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <img
+                src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg"
+                alt="Laboratory analysis with microscope and glassware"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div className="absolute bottom-8 left-8 right-8 text-white text-center">
+              <Badge variant="secondary" className="text-sm px-4 py-2 mb-4 bg-white/20 text-white border-white/30">
+                Our Products
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Comprehensive Laboratory Solutions
+              </h2>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                We supply a wide range of laboratory equipment, chemicals, and instruments
+                for research, medical, and industrial applications.
+              </p>
+            </div>
+          </div>
         </div>
 
         <Tabs value={activeCategory} onValueChange={setActiveCategory} className="space-y-8">
@@ -131,9 +152,16 @@ const ProductsSection = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         {product.description}
                       </p>
-                      <Button variant="outline" size="sm" className="w-full">
-                        Learn More
-                      </Button>
+                      <LearnMoreModal
+                        trigger={
+                          <Button variant="outline" size="sm" className="w-full">
+                            Learn More
+                          </Button>
+                        }
+                        type="product"
+                        title={product.name}
+                        data={product}
+                      />
                     </CardContent>
                   </Card>
                 ))}
@@ -143,19 +171,46 @@ const ProductsSection = () => {
         </Tabs>
 
         <div className="mt-16 text-center space-y-6">
-          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We work with leading manufacturers to provide custom laboratory solutions 
-              tailored to your specific requirements and budget.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero">
-                Request Custom Quote
-              </Button>
-              <Button variant="outline">
-                Download Product Catalog
-              </Button>
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl overflow-hidden">
+            <div className="relative">
+              <img
+                src="https://images.pexels.com/photos/3862623/pexels-photo-3862623.jpeg"
+                alt="Laboratory engineer analyzing modern equipment"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80"></div>
+              <div className="absolute inset-0 flex items-center justify-center text-white text-center">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">Custom Laboratory Solutions</h3>
+                  <p className="text-lg text-white/90">Tailored equipment and service packages</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                We work with leading manufacturers to provide custom laboratory solutions
+                tailored to your specific requirements and budget.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ServiceQuoteModal
+                  trigger={
+                    <Button variant="hero">
+                      Request Custom Quote
+                    </Button>
+                  }
+                  title="Custom Product Quote"
+                />
+                <ContactModal
+                  trigger={
+                    <Button variant="outline">
+                      Download Product Catalog
+                    </Button>
+                  }
+                  title="Request Product Catalog"
+                  purpose="Product Catalog Request"
+                />
+              </div>
             </div>
           </div>
         </div>

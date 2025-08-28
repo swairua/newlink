@@ -2,6 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Target, Eye, Award, Users } from "lucide-react";
+import LearnMoreModal from "./modals/LearnMoreModal";
+import ContactModal from "./modals/ContactModal";
 
 const AboutSection = () => {
   return (
@@ -16,6 +18,9 @@ const AboutSection = () => {
               <h2 className="text-3xl md:text-4xl font-bold">
                 <span className="text-primary">NEWLINK LAB SERVICES LIMITED</span>
               </h2>
+              <p className="text-lg text-secondary font-medium italic">
+                Orchestrating Scientific Solutions
+              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 NEWLINK LAB SERVICES LIMITED welcomes you to our scientific world, 
                 where we believe in quality and relationship in terms of competitiveness 
@@ -61,12 +66,53 @@ const AboutSection = () => {
               </Card>
             </div>
 
-            <Button variant="outline" size="lg">
-              Learn More About Our Services
-            </Button>
+            <LearnMoreModal
+              trigger={
+                <Button variant="outline" size="lg">
+                  Learn More About Our Services
+                </Button>
+              }
+              type="service"
+              title="About Newlink Lab Services"
+              data={{
+                title: "Professional Laboratory Services",
+                description: "Comprehensive equipment maintenance, repair, and support services",
+                icon: <Award className="w-8 h-8" />,
+                features: [
+                  "ISO 9001:2015 certified quality management",
+                  "GMP compliant documentation and procedures",
+                  "Multi-vendor equipment support",
+                  "24/7 emergency response service",
+                  "Certified and trained technicians",
+                  "Nationwide service coverage"
+                ]
+              }}
+            />
+            <ContactModal
+              trigger={
+                <Button variant="hero" size="lg" className="ml-4">
+                  Contact Us
+                </Button>
+              }
+              title="Contact Newlink Lab Services"
+              purpose="General Company Inquiry"
+            />
           </div>
 
           <div className="space-y-8">
+            <div className="relative rounded-2xl overflow-hidden mb-8">
+              <img
+                src="https://images.pexels.com/photos/3862623/pexels-photo-3862623.jpeg"
+                alt="Focused laboratory engineer analyzing equipment"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold">Expert Laboratory Services</h3>
+                <p className="text-white/90">Professional equipment maintenance by certified technicians</p>
+              </div>
+            </div>
+
             <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-0">
               <CardHeader>
                 <CardTitle className="text-xl text-center">Our Objectives</CardTitle>

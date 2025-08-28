@@ -1,25 +1,26 @@
 import { Button } from "./ui/button";
 import { Mail, MapPin, Clock } from "lucide-react";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    "Emergency Repair Services",
+    "24/7 Emergency Repair",
     "Preventive Maintenance",
+    "IQ/OQ/PQ Qualification",
     "Equipment Installation",
-    "Calibration Services",
-    "Technical Support",
-    "Equipment Validation"
+    "Calibration & Validation",
+    "Multi-Vendor Support"
   ];
 
-  const products = [
-    "Laboratory Equipment",
-    "Analytical Instruments",
-    "Testing Kits",
-    "Chemical Reagents",
-    "Lab Supplies",
-    "Safety Equipment"
+  const equipmentTypes = [
+    "HPLC & LC-MS Systems",
+    "GC & GC-MS Systems",
+    "Spectrophotometers",
+    "Incubators & Autoclaves",
+    "Balances & Centrifuges",
+    "Environmental Chambers"
   ];
 
   return (
@@ -28,31 +29,33 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">NL</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">NEWLINK LAB</h3>
-                <p className="text-xs text-background/70 -mt-1">SERVICES LTD</p>
-              </div>
+            <div className="flex items-center space-x-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
+                alt="Newlink Lab Services Ltd"
+                className="h-36 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
-              Professional laboratory equipment maintenance and repair services. 
-              We provide quality solutions to keep your laboratory running efficiently.
+              Professional laboratory equipment maintenance and repair services across Kenya.
+              Multi-vendor support with certified technicians for all major laboratory instruments.
             </p>
             <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-sm">
+                <span className="text-red-400">🚨</span>
+                <span className="font-semibold text-red-400">Emergency: +254 780 165 490</span>
+              </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="w-4 h-4" />
                 <span>info@newlinklabservices.co.ke</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="w-4 h-4" />
-                <span>Nairobi, Kenya</span>
+                <span>P.O Box 36294-00200, Nairobi, Kenya</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Clock className="w-4 h-4" />
-                <span>24/7 Emergency Service</span>
+                <span>24/7 Emergency Response Available</span>
               </div>
             </div>
           </div>
@@ -74,48 +77,50 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Equipment */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Products</h4>
+            <h4 className="text-lg font-semibold">Equipment We Service</h4>
             <ul className="space-y-2">
-              {products.map((product, index) => (
+              {equipmentTypes.map((equipment, index) => (
                 <li key={index}>
                   <a
-                    href="#products"
+                    href="#services"
                     className="text-sm text-background/70 hover:text-background transition-colors"
                   >
-                    {product}
+                    {equipment}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Contact */}
+          {/* Emergency Contact */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Quick Contact</h4>
+            <h4 className="text-lg font-semibold text-red-400">🚨 Emergency Contact</h4>
             <p className="text-sm text-background/70">
-              Need immediate assistance? Get in touch with our service team.
+              Critical equipment failure? Get immediate assistance from our certified technicians.
             </p>
             <div className="space-y-3">
-              <Button 
-                variant="secondary" 
-                size="sm" 
-                className="w-full bg-primary hover:bg-primary/90 text-white border-0"
-              >
-                Request Service Quote
-              </Button>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="w-full border-background/20 text-background hover:bg-background hover:text-foreground"
-              >
-                Emergency Service
-              </Button>
+              <div className="bg-red-600 rounded-lg p-3 text-center">
+                <div className="font-bold text-lg text-white">+254 780 165 490</div>
+                <div className="text-xs text-red-100">Call for immediate response</div>
+              </div>
+              <ServiceQuoteModal
+                trigger={
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full border-background/20 text-background hover:bg-background hover:text-foreground"
+                  >
+                    Request Service Quote
+                  </Button>
+                }
+                title="Service Quote Request"
+              />
             </div>
             <div className="text-sm text-background/70">
-              <div className="font-medium text-secondary">24/7 Emergency Available</div>
-              <div>Response time: Within 2 hours</div>
+              <div className="font-medium text-red-400">Response: Within 2 Hours</div>
+              <div>Nationwide coverage across Kenya</div>
             </div>
           </div>
         </div>
