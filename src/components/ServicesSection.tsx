@@ -19,43 +19,43 @@ const ServicesSection = () => {
     {
       icon: <Wrench className="w-8 h-8" />,
       title: "24/7 Emergency Repair",
-      description: "Experienced service engineers available around the clock for emergency laboratory equipment repairs.",
-      features: ["Immediate response", "On-site diagnostics", "Genuine parts", "Warranty coverage"]
+      description: "Certified technicians dispatched within 2 hours for critical equipment failures across all major brands.",
+      features: ["2-hour response time", "Multi-vendor support", "Genuine OEM parts", "Same-day resolution"]
     },
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Preventive Maintenance",
-      description: "GMP compliant preventive maintenance services to keep your equipment running at peak performance.",
-      features: ["Scheduled inspections", "Performance testing", "Calibration services", "Compliance documentation"]
+      description: "GMP compliant PM programs with IQ/OQ/PQ qualification services to meet regulatory requirements.",
+      features: ["Annual maintenance contracts", "Performance qualification", "Compliance documentation", "Scheduled calibration"]
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Equipment Installation",
-      description: "Professional installation and startup services for new laboratory equipment.",
-      features: ["Expert installation", "System integration", "User training", "Validation support"]
+      title: "Installation & Qualification",
+      description: "Complete installation, validation, and qualification services for new laboratory instrumentation.",
+      features: ["DQ/IQ/OQ/PQ services", "System commissioning", "User training programs", "Compliance validation"]
     }
   ];
 
   const equipmentTypes = [
     {
       icon: <Microscope className="w-6 h-6" />,
-      title: "Analytical Instruments",
-      items: ["Spectrophotometers", "Photometers", "Comparators", "pH Meters"]
+      title: "Chromatography Systems",
+      items: ["HPLC & UHPLC", "GC & GC-MS", "LC-MS/MS", "Ion Chromatography"]
     },
     {
       icon: <Beaker className="w-6 h-6" />,
-      title: "Laboratory Equipment",
-      items: ["Incubators", "Ovens", "Centrifuges", "Microscopes"]
+      title: "Spectroscopy Equipment",
+      items: ["UV-Vis Spectrophotometers", "FTIR Spectrometers", "Atomic Absorption", "ICP-MS"]
     },
     {
       icon: <FlaskConical className="w-6 h-6" />,
-      title: "Processing Equipment",
-      items: ["Distillers", "Thermal Cyclers", "Shakers", "Hot Plates"]
+      title: "Environmental Chambers",
+      items: ["Incubators & Ovens", "Stability Chambers", "Autoclaves", "Refrigerators & Freezers"]
     },
     {
       icon: <Thermometer className="w-6 h-6" />,
-      title: "Testing & Safety",
-      items: ["Test Kits", "Safety Equipment", "Storage Solutions", "Lab Supplies"]
+      title: "General Lab Equipment",
+      items: ["Balances & Scales", "Centrifuges", "Water Systems", "Dissolution Testers"]
     }
   ];
 
