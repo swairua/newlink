@@ -32,7 +32,7 @@ const Footer = () => {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
                 alt="Newlink Lab Services Ltd"
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-24 w-auto object-contain brightness-0 invert"
               />
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
