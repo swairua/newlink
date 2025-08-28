@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { CheckCircle, Mail } from "lucide-react";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const HeroSection = () => {
   return (
@@ -47,12 +48,24 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                🚨 Emergency Service Now
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Request Quote
-              </Button>
+              <ServiceQuoteModal
+                trigger={
+                  <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+                    🚨 Emergency Service Now
+                  </Button>
+                }
+                title="Emergency Service Request"
+                isEmergency={true}
+              />
+              <ServiceQuoteModal
+                trigger={
+                  <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                    Request Quote
+                  </Button>
+                }
+                title="Service Quote Request"
+                isEmergency={false}
+              />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-6 border-t">

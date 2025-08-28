@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,14 @@ const Navigation = () => {
 
           {/* Get Started Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Get Service Quote
-            </Button>
+            <ServiceQuoteModal
+              trigger={
+                <Button variant="hero" size="sm">
+                  Get Service Quote
+                </Button>
+              }
+              title="Service Quote Request"
+            />
           </div>
 
           {/* Mobile menu button */}
@@ -77,9 +83,14 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <Button variant="hero" className="w-full">
-                  Get Service Quote
-                </Button>
+                <ServiceQuoteModal
+                  trigger={
+                    <Button variant="hero" className="w-full">
+                      Get Service Quote
+                    </Button>
+                  }
+                  title="Service Quote Request"
+                />
               </div>
             </div>
           </div>
