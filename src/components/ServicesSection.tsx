@@ -1,18 +1,20 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { 
-  Wrench, 
-  Settings, 
-  Shield, 
-  Clock, 
-  CheckCircle2, 
+import {
+  Wrench,
+  Settings,
+  Shield,
+  Clock,
+  CheckCircle2,
   Users,
   Microscope,
   Beaker,
   FlaskConical,
   Thermometer
 } from "lucide-react";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
+import LearnMoreModal from "./modals/LearnMoreModal";
 
 const ServicesSection = () => {
   const mainServices = [
@@ -90,7 +92,7 @@ const ServicesSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
                       <CheckCircle2 className="w-4 h-4 text-secondary" />
@@ -98,6 +100,16 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
+                <LearnMoreModal
+                  trigger={
+                    <Button variant="outline" size="sm" className="w-full">
+                      Learn More
+                    </Button>
+                  }
+                  type="service"
+                  title={`Learn More: ${service.title}`}
+                  data={service}
+                />
               </CardContent>
             </Card>
           ))}
@@ -139,11 +151,21 @@ const ServicesSection = () => {
                   <CardTitle className="text-lg">{type.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-1 text-sm text-muted-foreground">
+                  <ul className="space-y-1 text-sm text-muted-foreground mb-4">
                     {type.items.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
                   </ul>
+                  <LearnMoreModal
+                    trigger={
+                      <Button variant="outline" size="sm" className="w-full">
+                        Learn More
+                      </Button>
+                    }
+                    type="equipment"
+                    title={`${type.title} Service`}
+                    data={type}
+                  />
                 </CardContent>
               </Card>
             ))}
@@ -174,12 +196,23 @@ const ServicesSection = () => {
 
         <div className="text-center mt-12 space-y-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8">
-              🚨 Emergency Service
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8">
-              Request Quote
-            </Button>
+            <ServiceQuoteModal
+              trigger={
+                <Button variant="hero" size="lg" className="text-lg px-8">
+                  🚨 Emergency Service
+                </Button>
+              }
+              title="Emergency Service Request"
+              isEmergency={true}
+            />
+            <ServiceQuoteModal
+              trigger={
+                <Button variant="outline" size="lg" className="text-lg px-8">
+                  Request Quote
+                </Button>
+              }
+              title="Service Quote Request"
+            />
           </div>
           <p className="text-muted-foreground">Call +254 780 165 490 for immediate assistance</p>
         </div>
