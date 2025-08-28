@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Mail, MapPin, Clock } from "lucide-react";
 import ServiceQuoteModal from "./modals/ServiceQuoteModal";
+import ContactModal from "./modals/ContactModal";
 
 const ContactSection = () => {
   return (
@@ -66,6 +67,15 @@ const ContactSection = () => {
                     }
                     title="Service Request"
                     isEmergency={false}
+                  />
+                  <ContactModal
+                    trigger={
+                      <Button variant="ghost" size="lg" className="w-full">
+                        General Inquiry
+                      </Button>
+                    }
+                    title="General Contact"
+                    purpose="General Inquiry"
                   />
                 </div>
 

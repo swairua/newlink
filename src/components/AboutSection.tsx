@@ -3,6 +3,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Target, Eye, Award, Users } from "lucide-react";
 import LearnMoreModal from "./modals/LearnMoreModal";
+import ContactModal from "./modals/ContactModal";
 
 const AboutSection = () => {
   return (
@@ -86,6 +87,15 @@ const AboutSection = () => {
                   "Nationwide service coverage"
                 ]
               }}
+            />
+            <ContactModal
+              trigger={
+                <Button variant="hero" size="lg" className="ml-4">
+                  Contact Us
+                </Button>
+              }
+              title="Contact Newlink Lab Services"
+              purpose="General Company Inquiry"
             />
           </div>
 
