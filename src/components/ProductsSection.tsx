@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { 
-  Beaker, 
-  Microscope, 
-  FlaskConical, 
+import {
+  Beaker,
+  Microscope,
+  FlaskConical,
   Thermometer,
   TestTube,
   Zap,
@@ -15,6 +15,8 @@ import {
   Shield,
   ChevronRight
 } from "lucide-react";
+import LearnMoreModal from "./modals/LearnMoreModal";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const ProductsSection = () => {
   const [activeCategory, setActiveCategory] = useState("general");
@@ -149,9 +151,16 @@ const ProductsSection = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         {product.description}
                       </p>
-                      <Button variant="outline" size="sm" className="w-full">
-                        Learn More
-                      </Button>
+                      <LearnMoreModal
+                        trigger={
+                          <Button variant="outline" size="sm" className="w-full">
+                            Learn More
+                          </Button>
+                        }
+                        type="product"
+                        title={product.name}
+                        data={product}
+                      />
                     </CardContent>
                   </Card>
                 ))}
@@ -183,9 +192,14 @@ const ProductsSection = () => {
                 tailored to your specific requirements and budget.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero">
-                  Request Custom Quote
-                </Button>
+                <ServiceQuoteModal
+                  trigger={
+                    <Button variant="hero">
+                      Request Custom Quote
+                    </Button>
+                  }
+                  title="Custom Product Quote"
+                />
                 <Button variant="outline">
                   Download Product Catalog
                 </Button>

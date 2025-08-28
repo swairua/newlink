@@ -1,9 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
 import { Badge } from "./ui/badge";
-import { Mail, MapPin, Clock, Send } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
+import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const ContactSection = () => {
   return (
@@ -40,100 +39,48 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="shadow-xl">
-            <CardHeader>
-              <CardTitle className="text-2xl">Service Request Form</CardTitle>
-              <p className="text-muted-foreground">
-                Provide equipment details for faster service. We respond within 2 hours.
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Contact Name</label>
-                  <Input placeholder="John Doe" />
+          <div className="space-y-6">
+            <Card className="shadow-xl">
+              <CardHeader>
+                <CardTitle className="text-2xl">Quick Service Request</CardTitle>
+                <p className="text-muted-foreground">
+                  Click below to open our service request form. We respond within 2 hours.
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-1 gap-4">
+                  <ServiceQuoteModal
+                    trigger={
+                      <Button variant="hero" size="lg" className="w-full">
+                        🚨 Emergency Service Request
+                      </Button>
+                    }
+                    title="Emergency Service Request"
+                    isEmergency={true}
+                  />
+                  <ServiceQuoteModal
+                    trigger={
+                      <Button variant="outline" size="lg" className="w-full">
+                        Regular Service Request
+                      </Button>
+                    }
+                    title="Service Request"
+                    isEmergency={false}
+                  />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Organization</label>
-                  <Input placeholder="Lab/Hospital/University" />
-                </div>
-              </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Email Address</label>
-                  <Input type="email" placeholder="john.doe@example.com" />
+                <div className="bg-muted/50 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2">What to Include:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Equipment type and manufacturer</li>
+                    <li>• Model and serial numbers</li>
+                    <li>• Detailed problem description</li>
+                    <li>• Urgency level and preferred service time</li>
+                  </ul>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Phone Number</label>
-                  <Input placeholder="+254 7XX XXX XXX" />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Urgency Level</label>
-                <select className="w-full p-2 border border-input rounded-md bg-background">
-                  <option>🚨 Emergency (Equipment Down)</option>
-                  <option>⚡ Urgent (Within 24 hours)</option>
-                  <option>📅 Routine (Within 1 week)</option>
-                  <option>💡 Quote/Consultation</option>
-                </select>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Equipment Type</label>
-                  <select className="w-full p-2 border border-input rounded-md bg-background">
-                    <option>HPLC/UHPLC System</option>
-                    <option>GC/GC-MS System</option>
-                    <option>LC-MS/MS System</option>
-                    <option>Spectrophotometer</option>
-                    <option>Incubator/Oven</option>
-                    <option>Autoclave</option>
-                    <option>Balance/Scale</option>
-                    <option>Centrifuge</option>
-                    <option>Other Laboratory Equipment</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Manufacturer</label>
-                  <select className="w-full p-2 border border-input rounded-md bg-background">
-                    <option>Agilent Technologies</option>
-                    <option>Shimadzu</option>
-                    <option>Thermo Fisher Scientific</option>
-                    <option>Waters Corporation</option>
-                    <option>PerkinElmer</option>
-                    <option>Bruker</option>
-                    <option>Other Manufacturer</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Model Number</label>
-                  <Input placeholder="e.g., 1260 Infinity, GC-2030" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Serial Number</label>
-                  <Input placeholder="Equipment serial number" />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Issue Description</label>
-                <Textarea
-                  placeholder="Describe the problem: error codes, symptoms, when it started..."
-                  rows={4}
-                />
-              </div>
-
-              <Button variant="hero" className="w-full">
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
