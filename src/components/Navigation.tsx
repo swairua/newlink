@@ -21,7 +21,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <div className="flex items-center space-x-3">
               <img
-                src="https://cdn.builder.io/o/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fb321f4cd649f49528c550efdd0a2ec41?alt=media&token=1258f38e-32cc-4b3f-bce6-4aad89e7f6d1&apiKey=14ef2fdbcfb242f3b9b974b49e20f798"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
                 alt="Newlink Lab Services Ltd - Orchestrating Scientific Solutions"
                 className="h-10 w-auto object-contain"
               />
