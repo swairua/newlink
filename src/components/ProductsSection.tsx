@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import LearnMoreModal from "./modals/LearnMoreModal";
 import ServiceQuoteModal from "./modals/ServiceQuoteModal";
+import ContactModal from "./modals/ContactModal";
 
 const ProductsSection = () => {
   const [activeCategory, setActiveCategory] = useState("general");
@@ -200,9 +201,15 @@ const ProductsSection = () => {
                   }
                   title="Custom Product Quote"
                 />
-                <Button variant="outline">
-                  Download Product Catalog
-                </Button>
+                <ContactModal
+                  trigger={
+                    <Button variant="outline">
+                      Download Product Catalog
+                    </Button>
+                  }
+                  title="Request Product Catalog"
+                  purpose="Product Catalog Request"
+                />
               </div>
             </div>
           </div>
