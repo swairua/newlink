@@ -5,6 +5,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Badge } from "../ui/badge";
 import { Send, CheckCircle } from "lucide-react";
+import { EmailService } from "../../lib/emailService";
 
 interface ServiceQuoteModalProps {
   trigger: React.ReactNode;
@@ -39,41 +40,32 @@ const ServiceQuoteModal = ({ trigger, title = "Service Request", isEmergency = f
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (in real implementation, this would send to your backend)
-    const emailData = {
-      to: "info@newlinklabservices.co.ke",
-      subject: `${isEmergency ? "🚨 EMERGENCY" : ""} Service Request - ${formData.equipmentType}`,
-      body: `
-New Service Request:
+    try {
+      // Send service request email
+      const success = await EmailService.sendServiceRequest({
+        contactName: formData.contactName,
+        organization: formData.organization,
+        email: formData.email,
+        phone: formData.phone,
+        urgency: formData.urgency,
+        equipmentType: formData.equipmentType,
+        manufacturer: formData.manufacturer,
+        modelNumber: formData.modelNumber,
+        serialNumber: formData.serialNumber,
+        description: formData.description
+      }, isEmergency);
 
-Contact Information:
-- Name: ${formData.contactName}
-- Organization: ${formData.organization}
-- Email: ${formData.email}
-- Phone: ${formData.phone}
-
-Service Details:
-- Urgency: ${formData.urgency}
-- Equipment Type: ${formData.equipmentType}
-- Manufacturer: ${formData.manufacturer}
-- Model Number: ${formData.modelNumber}
-- Serial Number: ${formData.serialNumber}
-
-Issue Description:
-${formData.description}
-
-${isEmergency ? "⚠️ This is an EMERGENCY request requiring immediate attention!" : ""}
-      `
-    };
-
-    // In a real implementation, you would send this to your backend
-    console.log("Email would be sent to:", emailData);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (success) {
+        setIsSubmitted(true);
+      } else {
+        alert("Failed to send request. Please try again or call our emergency line.");
+      }
+    } catch (error) {
+      console.error("Error sending service request:", error);
+      alert("Failed to send request. Please try again or call our emergency line.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {

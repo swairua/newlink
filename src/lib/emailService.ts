@@ -146,14 +146,3 @@ Time: ${new Date().toLocaleString("en-KE", { timeZone: "Africa/Nairobi" })} EAT
     return "Thank you for your service request. We will respond within 4 hours during business hours.";
   }
 }
-
-// Example usage in components:
-/*
-import { EmailService } from "@/lib/emailService";
-
-// For service requests
-const success = await EmailService.sendServiceRequest(formData, isEmergency);
-
-// For general contact
-const success = await EmailService.sendContactMessage(messageData);
-*/

@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Send, CheckCircle } from "lucide-react";
+import { EmailService } from "../../lib/emailService";
 
 interface ContactModalProps {
   trigger: React.ReactNode;
@@ -33,34 +34,27 @@ const ContactModal = ({ trigger, title = "Contact Us", purpose = "general inquir
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    const emailData = {
-      to: "info@newlinklabservices.co.ke",
-      subject: `${formData.subject || purpose} - Contact Form`,
-      body: `
-New Contact Form Submission:
+    try {
+      // Send contact message email
+      const success = await EmailService.sendContactMessage({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject || purpose,
+        message: formData.message
+      });
 
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Subject: ${formData.subject}
-
-Message:
-${formData.message}
-
----
-This message was sent via the Newlink Lab Services website contact form.
-      `
-    };
-
-    // In a real implementation, you would send this to your backend
-    console.log("Email would be sent to:", emailData);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (success) {
+        setIsSubmitted(true);
+      } else {
+        alert("Failed to send message. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error("Error sending contact message:", error);
+      alert("Failed to send message. Please try again or call us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
