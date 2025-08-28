@@ -16,6 +16,9 @@ const AboutSection = () => {
               <h2 className="text-3xl md:text-4xl font-bold">
                 <span className="text-primary">NEWLINK LAB SERVICES LIMITED</span>
               </h2>
+              <p className="text-lg text-secondary font-medium italic">
+                Orchestrating Scientific Solutions
+              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 NEWLINK LAB SERVICES LIMITED welcomes you to our scientific world, 
                 where we believe in quality and relationship in terms of competitiveness 

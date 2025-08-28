@@ -19,14 +19,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">NL</span>
-              </div>
-              <div>
-                <h1 className="text-lg font-bold text-primary">NEWLINK LAB</h1>
-                <p className="text-xs text-muted-foreground -mt-1">SERVICES LTD</p>
-              </div>
+            <div className="flex items-center space-x-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
+                alt="Newlink Lab Services Ltd - Orchestrating Scientific Solutions"
+                className="h-10 w-auto object-contain"
+              />
             </div>
           </div>
 
