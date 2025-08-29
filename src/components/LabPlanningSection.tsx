@@ -7,7 +7,7 @@ import LearnMoreModal from "./modals/LearnMoreModal";
 const LabPlanningSection = () => {
   const features = [
     { icon: <Ruler className="w-5 h-5" />, label: "Custom laboratory layouts" },
-    { icon: <Workflow className="w-5 h-5" />, label: "Workflow & process mapping" },
+    { icon: <GitBranch className="w-5 h-5" />, label: "Workflow & process mapping" },
     { icon: <FileCheck className="w-5 h-5" />, label: "Regulatory & safety compliance" },
     { icon: <LayoutGrid className="w-5 h-5" />, label: "Space optimization & utilities" },
     { icon: <PenTool className="w-5 h-5" />, label: "3D visualization & modeling" },
