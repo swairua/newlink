@@ -171,7 +171,7 @@ const ProductsSection = () => {
                         }
                         type="product"
                         title={product.name}
-                        data={{...product, image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800"}}
+                        data={{...product, image: getProductImage(product.name)}}
                       />
                     </CardContent>
                   </Card>
