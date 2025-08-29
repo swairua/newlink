@@ -83,7 +83,7 @@ const ProductsSection = () => {
     pharma: [
       { name: "Microbiology Media", description: "Culture media for microbiology", image: "https://images.unsplash.com/photo-1581091215367-59ab6dcef1b5?q=80&w=1200&auto=format&fit=crop" },
       { name: "MC Conkey, PDA, XLD", description: "Selective culture media", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
-      { name: "SDA, Transport Media", description: "Specialized growth media", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "SDA, Transport Media", description: "Specialized growth media", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
       { name: "Biotechnology Products", description: "Advanced biotech solutions", image: "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop" },
       { name: "Fermentation Products", description: "Fermentation systems and media", image: "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=1200&auto=format&fit=crop" }
     ]
