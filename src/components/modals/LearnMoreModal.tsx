@@ -1,5 +1,4 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
-import { AspectRatio } from "../ui/aspect-ratio";
 import { Badge } from "../ui/badge";
 import { CheckCircle, Clock, Users, Award } from "lucide-react";
 
@@ -11,7 +10,7 @@ interface LearnMoreModalProps {
 }
 
 const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => {
-  const defaultImage = "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop";
+  const defaultImage = "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=1200";
   const getFallbackImage = (key: string) => {
     const k = (key || "").toLowerCase();
     if (k.includes("chromatograph")) return "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop";
@@ -24,9 +23,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
   };
   const renderServiceContent = () => (
     <div className="space-y-6">
-      <AspectRatio ratio={16/9}>
-        <img src={data?.image || getFallbackImage(data?.title)} alt={`${data.title} image`} className="w-full h-full object-cover rounded-lg" />
-      </AspectRatio>
+      <div className="h-28 sm:h-36 rounded-lg overflow-hidden">
+        <img src={data?.image || getFallbackImage(data?.title)} onError={(e)=>{(e.currentTarget as HTMLImageElement).src = getFallbackImage(data?.title);}} alt={`${data.title} image`} className="w-full h-full object-cover" />
+      </div>
       <div className="text-center">
         <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
           {data.icon}
@@ -115,9 +114,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
   const renderEquipmentContent = () => (
     <div className="space-y-6">
-      <AspectRatio ratio={16/9}>
-        <img src={data?.image || getFallbackImage(data?.title)} alt={`${data.title} equipment`} className="w-full h-full object-cover rounded-lg" />
-      </AspectRatio>
+      <div className="h-28 sm:h-36 rounded-lg overflow-hidden">
+        <img src={data?.image || getFallbackImage(data?.title)} onError={(e)=>{(e.currentTarget as HTMLImageElement).src = getFallbackImage(data?.title);}} alt={`${data.title} equipment`} className="w-full h-full object-cover" />
+      </div>
       <div className="text-center">
         <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-4">
           {data.icon}
@@ -175,9 +174,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
   const renderProductContent = () => (
     <div className="space-y-6">
-      <AspectRatio ratio={16/9}>
-        <img src={data?.image || getFallbackImage(data?.name)} alt={`${data.name} image`} className="w-full h-full object-cover rounded-lg" />
-      </AspectRatio>
+      <div className="h-28 sm:h-36 rounded-lg overflow-hidden">
+        <img src={data?.image || getFallbackImage(data?.name)} onError={(e)=>{(e.currentTarget as HTMLImageElement).src = getFallbackImage(data?.name);}} alt={`${data.name} image`} className="w-full h-full object-cover" />
+      </div>
       <div className="text-center">
         <h3 className="text-xl font-bold text-primary mb-2">{data.name}</h3>
         <p className="text-muted-foreground">{data.description}</p>
