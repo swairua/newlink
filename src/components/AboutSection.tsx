@@ -102,7 +102,7 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="relative rounded-2xl overflow-hidden mb-8">
               <img
-                src="https://images.pexels.com/photos/3862623/pexels-photo-3862623.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800"
                 alt="Focused laboratory engineer analyzing equipment"
                 className="w-full h-64 object-cover"
               />
