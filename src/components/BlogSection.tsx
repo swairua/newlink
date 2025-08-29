@@ -42,7 +42,7 @@ const BlogSection = () => {
               <CardHeader className="pb-2"><CardTitle className="text-lg">{p.title}</CardTitle></CardHeader>
               <CardContent className="text-sm text-muted-foreground">
                 <p className="mb-4">{p.excerpt}</p>
-                <Button variant="link" className="px-0">Read more <ArrowRight className="ml-1 w-4 h-4" /></Button>
+                <Button asChild variant="link" className="px-0"><Link to={`/blog/${p.slug}`}>Read more <ArrowRight className="ml-1 w-4 h-4" /></Link></Button>
               </CardContent>
             </Card>
           ))}
