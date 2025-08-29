@@ -49,22 +49,26 @@ const ServicesSection = () => {
     {
       icon: <Microscope className="w-6 h-6" />,
       title: "Chromatography Systems",
-      items: ["HPLC & UHPLC", "GC & GC-MS", "LC-MS/MS", "Ion Chromatography"]
+      items: ["HPLC & UHPLC", "GC & GC-MS", "LC-MS/MS", "Ion Chromatography"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fw1.jpg?format=webp&width=800".replace("w1.jpg","adba5febae5f4dc191263688c2907132")
     },
     {
       icon: <Beaker className="w-6 h-6" />,
       title: "Spectroscopy Equipment",
-      items: ["UV-Vis Spectrophotometers", "FTIR Spectrometers", "Atomic Absorption", "ICP-MS"]
+      items: ["UV-Vis Spectrophotometers", "FTIR Spectrometers", "Atomic Absorption", "ICP-MS"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800"
     },
     {
       icon: <FlaskConical className="w-6 h-6" />,
       title: "Environmental Chambers",
-      items: ["Incubators & Ovens", "Stability Chambers", "Autoclaves", "Refrigerators & Freezers"]
+      items: ["Incubators & Ovens", "Stability Chambers", "Autoclaves", "Refrigerators & Freezers"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F9af414ebd20648ad942e05d0c896b7d1?format=webp&width=800"
     },
     {
       icon: <Thermometer className="w-6 h-6" />,
       title: "General Lab Equipment",
-      items: ["Balances & Scales", "Centrifuges", "Water Systems", "Dissolution Testers"]
+      items: ["Balances & Scales", "Centrifuges", "Water Systems", "Dissolution Testers"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fe6abbe4e5dea4339bed3dc71bd91d53d?format=webp&width=800"
     }
   ];
 
@@ -395,7 +399,7 @@ const ServicesSection = () => {
                     }
                     type="equipment"
                     title={`${type.title} Service`}
-                    data={{...type, image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fe6abbe4e5dea4339bed3dc71bd91d53d?format=webp&width=800"}}
+                    data={type}
                   />
                 </CardContent>
               </Card>
