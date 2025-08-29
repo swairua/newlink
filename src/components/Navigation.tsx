@@ -50,7 +50,7 @@ const Navigation = () => {
                     )}
                   </a>
                   {item.children && (
-                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 mt-2 w-[520px] bg-background border rounded-xl shadow-xl p-4 transition-all z-[60]">
+                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 mt-2 w-[520px] bg-background border rounded-xl shadow-xl p-4 transition-all z-[60] origin-top-right">
                       <div className="grid grid-cols-2 gap-3">
                         {item.children.map((child) => (
                           <a key={child.name} href={child.href} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50">
