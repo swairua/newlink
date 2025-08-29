@@ -34,30 +34,55 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
       <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg p-4">
         <h4 className="font-semibold mb-3">Service Specifications:</h4>
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          <div>
-            <span className="font-medium">Response Time:</span>
-            <br />
-            <span className="text-muted-foreground">
-              {data.title.includes("Emergency") ? "Within 2 hours" : "Same/Next day"}
-            </span>
+        {data?.category === "construction" ? (
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span className="font-medium">Standards:</span>
+              <br />
+              <span className="text-muted-foreground">ISO 14644, OSHA, NFPA, WHO GMP</span>
+            </div>
+            <div>
+              <span className="font-medium">Deliverables:</span>
+              <br />
+              <span className="text-muted-foreground">As-built drawings, validation docs, user training</span>
+            </div>
+            <div>
+              <span className="font-medium">Project Management:</span>
+              <br />
+              <span className="text-muted-foreground">Single point of contact, phased milestones</span>
+            </div>
+            <div>
+              <span className="font-medium">Timeframes:</span>
+              <br />
+              <span className="text-muted-foreground">Fast-track and scheduled builds available</span>
+            </div>
           </div>
-          <div>
-            <span className="font-medium">Coverage:</span>
-            <br />
-            <span className="text-muted-foreground">Nationwide Kenya</span>
+        ) : (
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span className="font-medium">Response Time:</span>
+              <br />
+              <span className="text-muted-foreground">
+                {data.title.includes("Emergency") ? "Within 2 hours" : "Same/Next day"}
+              </span>
+            </div>
+            <div>
+              <span className="font-medium">Coverage:</span>
+              <br />
+              <span className="text-muted-foreground">Nationwide Kenya</span>
+            </div>
+            <div>
+              <span className="font-medium">Technicians:</span>
+              <br />
+              <span className="text-muted-foreground">Certified professionals</span>
+            </div>
+            <div>
+              <span className="font-medium">Documentation:</span>
+              <br />
+              <span className="text-muted-foreground">GMP compliant reports</span>
+            </div>
           </div>
-          <div>
-            <span className="font-medium">Technicians:</span>
-            <br />
-            <span className="text-muted-foreground">Certified professionals</span>
-          </div>
-          <div>
-            <span className="font-medium">Documentation:</span>
-            <br />
-            <span className="text-muted-foreground">GMP compliant reports</span>
-          </div>
-        </div>
+        )}
       </div>
 
       <div className="space-y-3">
