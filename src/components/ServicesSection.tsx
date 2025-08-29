@@ -50,7 +50,7 @@ const ServicesSection = () => {
       icon: <Microscope className="w-6 h-6" />,
       title: "Chromatography Systems",
       items: ["HPLC & UHPLC", "GC & GC-MS", "LC-MS/MS", "Ion Chromatography"],
-      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fw1.jpg?format=webp&width=800".replace("w1.jpg","adba5febae5f4dc191263688c2907132")
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800"
     },
     {
       icon: <Beaker className="w-6 h-6" />,
