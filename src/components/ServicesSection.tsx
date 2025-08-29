@@ -160,7 +160,8 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Design & Planning",
                     description: "Comprehensive laboratory design services ensuring optimal workflow and compliance",
-                    features: ["Custom laboratory layouts", "Workflow optimization", "Regulatory compliance design", "3D visualization & modeling"]
+                    features: ["Custom laboratory layouts", "Workflow optimization", "Regulatory compliance design", "3D visualization & modeling"],
+                    category: "construction"
                   }}
                 />
               </CardContent>
@@ -191,7 +192,8 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Construction & Build",
                     description: "Professional laboratory construction services from foundation to completion",
-                    features: ["Complete lab construction", "Cleanroom installations", "Modular lab systems", "Project management"]
+                    features: ["Complete lab construction", "Cleanroom installations", "Modular lab systems", "Project management"],
+                    category: "construction"
                   }}
                 />
               </CardContent>
@@ -222,7 +224,8 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Infrastructure Setup",
                     description: "Complete infrastructure installation for modern laboratory facilities",
-                    features: ["Electrical installations", "Gas & vacuum systems", "HVAC & ventilation", "Water & waste systems"]
+                    features: ["Electrical installations", "Gas & vacuum systems", "HVAC & ventilation", "Water & waste systems"],
+                    category: "construction"
                   }}
                 />
               </CardContent>
@@ -253,7 +256,8 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Fit-out & Furnishing",
                     description: "Complete laboratory fit-out services with custom furniture and safety equipment",
-                    features: ["Laboratory furniture", "Fume hood installations", "Safety equipment setup", "Equipment positioning"]
+                    features: ["Laboratory furniture", "Fume hood installations", "Safety equipment setup", "Equipment positioning"],
+                    category: "construction"
                   }}
                 />
               </CardContent>
