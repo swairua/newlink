@@ -1,7 +1,7 @@
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { CheckCircle2, Settings, ClipboardCheck, Cpu, Users, GraduationCap } from "lucide-react";
+import { Settings, ClipboardCheck, Cpu, Users, GraduationCap } from "lucide-react";
 import LearnMoreModal from "./modals/LearnMoreModal";
 
 const services = [
