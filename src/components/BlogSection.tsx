@@ -6,17 +6,17 @@ import { ArrowRight } from "lucide-react";
 const posts = [
   {
     title: "Designing Safer Labs: From Planning to Commissioning",
-    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800",
     excerpt: "A practical approach to planning, utilities, fume extraction and validation for new laboratories.",
   },
   {
     title: "Fume Hoods & Gas Cupboards: What to Consider",
-    img: "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800",
     excerpt: "Key standards, airflow performance and energy considerations when selecting containment.",
   },
   {
     title: "Extending Instrument Uptime with PM & IoT Monitoring",
-    img: "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800",
     excerpt: "Combining preventive maintenance with remote alerts to reduce downtime and ensure compliance.",
   },
 ];
