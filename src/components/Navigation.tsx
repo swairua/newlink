@@ -39,13 +39,39 @@ const Navigation = () => {
           <div className="hidden lg:block flex-shrink-0">
             <div className="flex items-baseline space-x-4 xl:space-x-8">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 px-2 py-2 text-sm font-medium whitespace-nowrap"
-                >
-                  {item.name}
-                </a>
+                <div key={item.name} className="relative group">
+                  <a
+                    href={item.href}
+                    className="flex items-center gap-1 text-foreground hover:text-primary transition-colors duration-300 px-2 py-2 text-sm font-medium whitespace-nowrap"
+                  >
+                    {item.name}
+                    {item.children && (
+                      <svg className="w-4 h-4 transition-transform group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+                    )}
+                  </a>
+                  {item.children && (
+                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 mt-2 w-[520px] bg-background border rounded-xl shadow-xl p-4 transition-all">
+                      <div className="grid grid-cols-2 gap-3">
+                        {item.children.map((child) => (
+                          <a key={child.name} href={child.href} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50">
+                            {/* simple icon set via inline svg based on name */}
+                            <div className="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                              {child.icon === "Layout" && (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>)}
+                              {child.icon === "Shield" && (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>)}
+                              {child.icon === "Wind" && (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h13a4 4 0 100-8"/><path d="M3 20h9a4 4 0 110-8"/></svg>)}
+                              {child.icon === "Wrench" && (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a4 4 0 01-5.66 5.66L3 18l3 3 6.04-6.04A4 4 0 1014.7 6.3z"/></svg>)}
+                              {child.icon === "Book" && (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4v15.5A2.5 2.5 0 006.5 22H20V6a2 2 0 00-2-2H6.5A2.5 2.5 0 004 6.5z"/></svg>)}
+                            </div>
+                            <div>
+                              <div className="font-medium text-sm">{child.name}</div>
+                              <div className="text-xs text-muted-foreground">{child.name === 'Lab Planning' ? 'Layouts & compliance' : child.name === 'Safer labs' ? 'Furniture & extraction' : child.name === 'Gas Cupboards' ? 'Fume hoods & safety' : child.name === 'Services' ? 'Repair & maintenance' : 'Articles & updates'}</div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
