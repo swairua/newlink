@@ -9,7 +9,13 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
+    { name: "Build", href: "#planning", children: [
+      { name: "Lab Planning", href: "#planning", icon: "Layout" },
+      { name: "Safer labs", href: "#safety", icon: "Shield" },
+      { name: "Gas Cupboards", href: "#gas-cupboards", icon: "Wind" },
+      { name: "Services", href: "#services", icon: "Wrench" },
+      { name: "Blog", href: "#blog", icon: "Book" },
+    ]},
     { name: "Products", href: "#products" },
     { name: "Contact", href: "#contact" },
   ];
