@@ -7,16 +7,19 @@ import { Link } from "react-router-dom";
 const posts = [
   {
     title: "Designing Safer Labs: From Planning to Commissioning",
+    slug: "designing-safer-labs",
     img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800",
     excerpt: "A practical approach to planning, utilities, fume extraction and validation for new laboratories.",
   },
   {
     title: "Fume Hoods & Gas Cupboards: What to Consider",
+    slug: "fume-hoods-gas-cupboards",
     img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800",
     excerpt: "Key standards, airflow performance and energy considerations when selecting containment.",
   },
   {
     title: "Extending Instrument Uptime with PM & IoT Monitoring",
+    slug: "pm-iot-monitoring",
     img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800",
     excerpt: "Combining preventive maintenance with remote alerts to reduce downtime and ensure compliance.",
   },
