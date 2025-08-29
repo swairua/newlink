@@ -89,6 +89,17 @@ const ProductsSection = () => {
     ]
   };
 
+  const getProductImage = (name: string) => {
+    const k = name.toLowerCase();
+    if (k.includes("incubator")) return "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("oven")) return "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("vacuum")) return "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("chromat") || k.includes("spectro")) return "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("label") || k.includes("barcode")) return "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("reagent") || k.includes("buffer") || k.includes("chemical")) return "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop";
+    return "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop";
+  };
+
   return (
     <section id="products" className="py-24 bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
