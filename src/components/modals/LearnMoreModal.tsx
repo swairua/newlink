@@ -10,8 +10,12 @@ interface LearnMoreModalProps {
 }
 
 const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => {
+  const defaultImage = "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=1200";
   const renderServiceContent = () => (
     <div className="space-y-6">
+      { (data?.image || defaultImage) && (
+        <img src={data?.image || defaultImage} alt={`${data.title} image`} className="w-full h-56 object-cover rounded-lg" />
+      ) }
       <div className="text-center">
         <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
           {data.icon}
@@ -100,6 +104,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
   const renderEquipmentContent = () => (
     <div className="space-y-6">
+      { (data?.image || defaultImage) && (
+        <img src={data?.image || defaultImage} alt={`${data.title} equipment`} className="w-full h-56 object-cover rounded-lg" />
+      ) }
       <div className="text-center">
         <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-4">
           {data.icon}
@@ -157,6 +164,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
   const renderProductContent = () => (
     <div className="space-y-6">
+      { (data?.image || defaultImage) && (
+        <img src={data?.image || defaultImage} alt={`${data.name} image`} className="w-full h-56 object-cover rounded-lg" />
+      ) }
       <div className="text-center">
         <h3 className="text-xl font-bold text-primary mb-2">{data.name}</h3>
         <p className="text-muted-foreground">{data.description}</p>
@@ -228,7 +238,7 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
       <DialogTrigger asChild>
         {trigger}
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl sm:max-w-5xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>

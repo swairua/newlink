@@ -47,6 +47,7 @@ const LabPlanningSection = () => {
                     "Integrated planning that aligns compliance, safety and productivity for new and refurbished labs.",
                   features: features.map((f) => f.label),
                   category: "construction",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800",
                 }}
               />
             </div>

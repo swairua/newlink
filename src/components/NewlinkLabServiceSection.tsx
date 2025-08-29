@@ -35,7 +35,7 @@ const NewlinkLabServiceSection = () => {
                   trigger={<Button variant="outline" size="sm" className="w-full">Learn More</Button>}
                   type="service"
                   title={`Learn more: ${s.title}`}
-                  data={{ title: s.title, description: s.desc, features: [s.desc], category: "construction" }}
+                  data={{ title: s.title, description: s.desc, features: [s.desc], category: "construction", image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800" }}
                 />
               </CardContent>
             </Card>

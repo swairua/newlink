@@ -5,38 +5,38 @@ import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 const ImageGallerySection = () => {
   const galleryImages = [
     {
-      src: "https://images.pexels.com/photos/8940355/pexels-photo-8940355.jpeg",
-      alt: "Laboratory technician adjusting precision equipment",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800",
+      alt: "Installed laboratory gas cupboard and worktops",
       title: "Precision Equipment Service",
       description: "Expert maintenance of analytical instruments"
     },
     {
-      src: "https://images.pexels.com/photos/5953827/pexels-photo-5953827.jpeg",
-      alt: "Professional in sterile laboratory environment",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800",
+      alt: "Detailed planning and measurements for lab layouts",
       title: "Sterile Environment Standards",
       description: "GMP compliant service procedures"
     },
     {
-      src: "https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg",
-      alt: "Scientists analyzing test tubes in protective gear",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800",
+      alt: "Partitioned lab with frosted glass",
       title: "Quality Analysis",
       description: "Comprehensive testing and validation"
     },
     {
-      src: "https://images.pexels.com/photos/3862623/pexels-photo-3862623.jpeg",
-      alt: "Engineer analyzing modern laboratory equipment",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800",
+      alt: "Partition wall with framed windows",
       title: "Advanced Technology",
       description: "State-of-the-art laboratory instrumentation"
     },
     {
-      src: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg",
-      alt: "Scientist analyzing blue liquid with microscope",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800",
+      alt: "3D rendered plan for lab counters",
       title: "Analytical Services",
       description: "Professional sample analysis and testing"
     },
     {
-      src: "https://images.pexels.com/photos/6754844/pexels-photo-6754844.jpeg",
-      alt: "Technician working on electronics in engineering lab",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F23fa8ca88f6c4061a04b386cdf033046?format=webp&width=800",
+      alt: "Service corridor and utility planning",
       title: "Technical Support",
       description: "Expert equipment repair and maintenance"
     }

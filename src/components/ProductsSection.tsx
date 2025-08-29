@@ -97,12 +97,12 @@ const ProductsSection = () => {
           <div className="relative rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               <img
-                src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800"
                 alt="Scientists in protective gear analyzing test tubes"
                 className="w-full h-64 md:h-80 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800"
                 alt="Laboratory analysis with microscope and glassware"
                 className="w-full h-64 md:h-80 object-cover"
               />
@@ -160,7 +160,7 @@ const ProductsSection = () => {
                         }
                         type="product"
                         title={product.name}
-                        data={product}
+                        data={{...product, image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800"}}
                       />
                     </CardContent>
                   </Card>
@@ -174,7 +174,7 @@ const ProductsSection = () => {
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl overflow-hidden">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3862623/pexels-photo-3862623.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800"
                 alt="Laboratory engineer analyzing modern equipment"
                 className="w-full h-48 object-cover"
               />

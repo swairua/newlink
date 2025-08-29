@@ -47,6 +47,7 @@ const GasCupboardsSection = () => {
                 description: "High containment solutions with low energy consumption and robust safety systems.",
                 features: features.map((f) => f.text),
                 category: "construction",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800",
               }}
             />
           </div>
