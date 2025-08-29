@@ -5,11 +5,11 @@ import { Settings, ClipboardCheck, Cpu, Users, GraduationCap } from "lucide-reac
 import LearnMoreModal from "./modals/LearnMoreModal";
 
 const services = [
-  { title: "Verification", icon: <ClipboardCheck className="w-5 h-5" />, desc: "Instrument verification and IQ/OQ/PQ qualification." },
-  { title: "Maintenance", icon: <Settings className="w-5 h-5" />, desc: "Preventive maintenance plans for uptime and compliance." },
-  { title: "Formation", icon: <GraduationCap className="w-5 h-5" />, desc: "User training and best-practice SOP development." },
-  { title: "SAT", icon: <Users className="w-5 h-5" />, desc: "Site Acceptance Testing and commissioning." },
-  { title: "IoT Lab", icon: <Cpu className="w-5 h-5" />, desc: "Remote monitoring, alerts and utilization analytics." },
+  { title: "Verification", icon: <ClipboardCheck className="w-5 h-5" />, desc: "Instrument verification and IQ/OQ/PQ qualification.", image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800" },
+  { title: "Maintenance", icon: <Settings className="w-5 h-5" />, desc: "Preventive maintenance plans for uptime and compliance.", image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F74c6c4a711a1457cbba7ffb26da9b4bd?format=webp&width=800" },
+  { title: "Formation", icon: <GraduationCap className="w-5 h-5" />, desc: "User training and best-practice SOP development.", image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F23fa8ca88f6c4061a04b386cdf033046?format=webp&width=800" },
+  { title: "SAT", icon: <Users className="w-5 h-5" />, desc: "Site Acceptance Testing and commissioning.", image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800" },
+  { title: "IoT Lab", icon: <Cpu className="w-5 h-5" />, desc: "Remote monitoring, alerts and utilization analytics.", image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fe6abbe4e5dea4339bed3dc71bd91d53d?format=webp&width=800" },
 ];
 
 const NewlinkLabServiceSection = () => {
