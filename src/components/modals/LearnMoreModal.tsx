@@ -10,8 +10,22 @@ interface LearnMoreModalProps {
 }
 
 const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => {
+  const defaultImage = "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=1200";
+  const getFallbackImage = (key: string) => {
+    const k = (key || "").toLowerCase();
+    if (k.includes("chromatograph")) return "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("spectro")) return "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("incubator") || k.includes("environment")) return "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("fume") || k.includes("hood") || k.includes("cupboard")) return "https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("gas") || k.includes("vacuum") || k.includes("hvac") || k.includes("infrastructure")) return "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("training") || k.includes("formation")) return "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop";
+    return defaultImage;
+  };
   const renderServiceContent = () => (
     <div className="space-y-6">
+      <div className="h-28 sm:h-36 rounded-lg overflow-hidden">
+        <img src={data?.image || getFallbackImage(data?.title)} onError={(e)=>{(e.currentTarget as HTMLImageElement).src = getFallbackImage(data?.title);}} alt={`${data.title} image`} className="w-full h-full object-cover" />
+      </div>
       <div className="text-center">
         <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
           {data.icon}
@@ -34,30 +48,55 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
       <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg p-4">
         <h4 className="font-semibold mb-3">Service Specifications:</h4>
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          <div>
-            <span className="font-medium">Response Time:</span>
-            <br />
-            <span className="text-muted-foreground">
-              {data.title.includes("Emergency") ? "Within 2 hours" : "Same/Next day"}
-            </span>
+        {data?.category === "construction" ? (
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span className="font-medium">Standards:</span>
+              <br />
+              <span className="text-muted-foreground">ISO 14644, OSHA, NFPA, WHO GMP</span>
+            </div>
+            <div>
+              <span className="font-medium">Deliverables:</span>
+              <br />
+              <span className="text-muted-foreground">As-built drawings, validation docs, user training</span>
+            </div>
+            <div>
+              <span className="font-medium">Project Management:</span>
+              <br />
+              <span className="text-muted-foreground">Single point of contact, phased milestones</span>
+            </div>
+            <div>
+              <span className="font-medium">Timeframes:</span>
+              <br />
+              <span className="text-muted-foreground">Fast-track and scheduled builds available</span>
+            </div>
           </div>
-          <div>
-            <span className="font-medium">Coverage:</span>
-            <br />
-            <span className="text-muted-foreground">Nationwide Kenya</span>
+        ) : (
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span className="font-medium">Response Time:</span>
+              <br />
+              <span className="text-muted-foreground">
+                {data.title.includes("Emergency") ? "Within 2 hours" : "Same/Next day"}
+              </span>
+            </div>
+            <div>
+              <span className="font-medium">Coverage:</span>
+              <br />
+              <span className="text-muted-foreground">Nationwide Kenya</span>
+            </div>
+            <div>
+              <span className="font-medium">Technicians:</span>
+              <br />
+              <span className="text-muted-foreground">Certified professionals</span>
+            </div>
+            <div>
+              <span className="font-medium">Documentation:</span>
+              <br />
+              <span className="text-muted-foreground">GMP compliant reports</span>
+            </div>
           </div>
-          <div>
-            <span className="font-medium">Technicians:</span>
-            <br />
-            <span className="text-muted-foreground">Certified professionals</span>
-          </div>
-          <div>
-            <span className="font-medium">Documentation:</span>
-            <br />
-            <span className="text-muted-foreground">GMP compliant reports</span>
-          </div>
-        </div>
+        )}
       </div>
 
       <div className="space-y-3">
@@ -75,6 +114,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
   const renderEquipmentContent = () => (
     <div className="space-y-6">
+      <div className="h-28 sm:h-36 rounded-lg overflow-hidden">
+        <img src={data?.image || getFallbackImage(data?.title)} onError={(e)=>{(e.currentTarget as HTMLImageElement).src = getFallbackImage(data?.title);}} alt={`${data.title} equipment`} className="w-full h-full object-cover" />
+      </div>
       <div className="text-center">
         <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-4">
           {data.icon}
@@ -132,6 +174,9 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
 
   const renderProductContent = () => (
     <div className="space-y-6">
+      <div className="h-28 sm:h-36 rounded-lg overflow-hidden">
+        <img src={data?.image || getFallbackImage(data?.name)} onError={(e)=>{(e.currentTarget as HTMLImageElement).src = getFallbackImage(data?.name);}} alt={`${data.name} image`} className="w-full h-full object-cover" />
+      </div>
       <div className="text-center">
         <h3 className="text-xl font-bold text-primary mb-2">{data.name}</h3>
         <p className="text-muted-foreground">{data.description}</p>
@@ -203,7 +248,7 @@ const LearnMoreModal = ({ trigger, type, title, data }: LearnMoreModalProps) => 
       <DialogTrigger asChild>
         {trigger}
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl sm:max-w-5xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>

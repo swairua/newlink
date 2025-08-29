@@ -33,60 +33,71 @@ const ProductsSection = () => {
 
   const products = {
     general: [
-      { name: "General Supplies", description: "Basic laboratory consumables and supplies" },
-      { name: "Laboratory Equipment", description: "Essential lab equipment for daily operations" },
-      { name: "Laboratory Chemicals", description: "High-grade chemicals for research" },
-      { name: "Industrial Chemicals", description: "Industrial-grade chemical solutions" },
-      { name: "Research Products", description: "Specialized research equipment and materials" },
-      { name: "Biological Products", description: "Biological specimens and media" },
-      { name: "Hospital Equipment", description: "Medical and hospital-grade equipment" },
-      { name: "Pharmaceutical Items", description: "Pharmaceutical supplies and equipment" }
+      { name: "General Supplies", description: "Basic laboratory consumables and supplies", image: "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Laboratory Equipment", description: "Essential lab equipment for daily operations", image: "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Laboratory Chemicals", description: "High-grade chemicals for research", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Industrial Chemicals", description: "Industrial-grade chemical solutions", image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Research Products", description: "Specialized research equipment and materials", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Biological Products", description: "Biological specimens and media", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Hospital Equipment", description: "Medical and hospital-grade equipment", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Pharmaceutical Items", description: "Pharmaceutical supplies and equipment", image: "https://images.unsplash.com/photo-1584367369853-8b966cf3b4f4?q=80&w=1200&auto=format&fit=crop" }
     ],
     equipment: [
-      { name: "Barcode Label Printers", description: "Professional labeling solutions" },
-      { name: "Thermal Transfer Ribbons", description: "High-quality printing ribbons" },
-      { name: "Barcode Generating Software", description: "Label design and printing software" },
-      { name: "Barcode Scanning Devices", description: "Handheld and fixed scanners" },
-      { name: "Receipt Papers", description: "Thermal receipt papers" },
-      { name: "Ribbons", description: "Printer ribbons and consumables" },
-      { name: "Labels and Tags", description: "Various labeling solutions" },
-      { name: "Security Devices", description: "Lab security equipment" }
+      { name: "Barcode Label Printers", description: "Professional labeling solutions", image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Thermal Transfer Ribbons", description: "High-quality printing ribbons", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Barcode Generating Software", description: "Label design and printing software", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Barcode Scanning Devices", description: "Handheld and fixed scanners", image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Receipt Papers", description: "Thermal receipt papers", image: "https://images.unsplash.com/photo-1515855670271-9676b1c87b9e?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Ribbons", description: "Printer ribbons and consumables", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Labels and Tags", description: "Various labeling solutions", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Security Devices", description: "Lab security equipment", image: "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop" }
     ],
     instruments: [
-      { name: "Universal Incubator", description: "Multi-purpose incubation solutions" },
-      { name: "Cooled Storage Incubator", description: "Temperature-controlled storage" },
-      { name: "Cooled Incubator", description: "Precision cooling incubation" },
-      { name: "Peltier Cooled Incubator", description: "Advanced cooling technology" },
-      { name: "CO2 Incubator", description: "Carbon dioxide incubation systems" },
-      { name: "Compressor Cooled Incubator", description: "High-capacity cooling" },
-      { name: "Vacuum Oven", description: "Vacuum drying solutions" },
-      { name: "Universal Oven", description: "General-purpose heating" }
+      { name: "Universal Incubator", description: "Multi-purpose incubation solutions", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Cooled Storage Incubator", description: "Temperature-controlled storage", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Cooled Incubator", description: "Precision cooling incubation", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Peltier Cooled Incubator", description: "Advanced cooling technology", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "CO2 Incubator", description: "Carbon dioxide incubation systems", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Compressor Cooled Incubator", description: "High-capacity cooling", image: "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Vacuum Oven", description: "Vacuum drying solutions", image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Universal Oven", description: "General-purpose heating", image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1200&auto=format&fit=crop" }
     ],
     testing: [
-      { name: "Photometer 8000", description: "Advanced photometric analysis" },
-      { name: "Photometer 7500", description: "Professional water testing" },
-      { name: "Photometer 7100", description: "Portable testing solutions" },
-      { name: "Arsenator", description: "Arsenic detection systems" },
-      { name: "Compact Turbidity Meter", description: "Water clarity measurement" },
-      { name: "UV-VISIBLE", description: "UV-Visible spectroscopy" },
-      { name: "Spectrophotometers", description: "Optical analysis instruments" },
-      { name: "Standard Comparators", description: "Visual comparison tools" }
+      { name: "Portable Colorimeter", description: "Field color measurement for water analysis", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Chlorimeter Kit", description: "Free/total chlorine testing kit", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Dissolved Oxygen Meter", description: "Portable DO measurement", image: "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Arsenator", description: "Arsenic detection systems", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Compact Turbidity Meter", description: "Water clarity measurement", image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+      { name: "UV-VISIBLE", description: "UV-Visible spectroscopy", image: "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Spectrophotometers", description: "Optical analysis instruments", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Standard Comparators", description: "Visual comparison tools", image: "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop" }
     ],
     reagents: [
-      { name: "Reagents & Standards", description: "High-purity analytical reagents" },
-      { name: "pH Buffers", description: "Buffer solutions for pH calibration" },
-      { name: "Analytical Reagents", description: "Certified analytical standards" },
-      { name: "Analytical Standards", description: "Reference standards for analysis" },
-      { name: "Volumetric Solutions", description: "Precise volumetric reagents" },
-      { name: "General Laboratory Reagents", description: "Common lab chemicals" }
+      { name: "Reagents & Standards", description: "High-purity analytical reagents", image: "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "pH Buffers", description: "Buffer solutions for pH calibration", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Analytical Reagents", description: "Certified analytical standards", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Analytical Standards", description: "Reference standards for analysis", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Volumetric Solutions", description: "Precise volumetric reagents", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "General Laboratory Reagents", description: "Common lab chemicals", image: "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop" }
     ],
     pharma: [
-      { name: "Microbiology Media", description: "Culture media for microbiology" },
-      { name: "MC Conkey, PDA, XLD", description: "Selective culture media" },
-      { name: "SDA, Transport Media", description: "Specialized growth media" },
-      { name: "Biotechnology Products", description: "Advanced biotech solutions" },
-      { name: "Fermentation Products", description: "Fermentation systems and media" }
+      { name: "Microbiology Media", description: "Culture media for microbiology", image: "https://images.unsplash.com/photo-1581091215367-59ab6dcef1b5?q=80&w=1200&auto=format&fit=crop" },
+      { name: "MC Conkey, PDA, XLD", description: "Selective culture media", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "SDA, Transport Media", description: "Specialized growth media", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Biotechnology Products", description: "Advanced biotech solutions", image: "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Fermentation Products", description: "Fermentation systems and media", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" }
     ]
+  };
+
+  const getProductImage = (name: string) => {
+    const k = name.toLowerCase();
+    if (k.includes("incubator")) return "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("oven")) return "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("vacuum")) return "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("chromat") || k.includes("spectro")) return "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("label") || k.includes("barcode")) return "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop";
+    if (k.includes("reagent") || k.includes("buffer") || k.includes("chemical")) return "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop";
+    return "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop";
   };
 
   return (
@@ -97,12 +108,12 @@ const ProductsSection = () => {
           <div className="relative rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               <img
-                src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800"
                 alt="Scientists in protective gear analyzing test tubes"
                 className="w-full h-64 md:h-80 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800"
                 alt="Laboratory analysis with microscope and glassware"
                 className="w-full h-64 md:h-80 object-cover"
               />
@@ -160,7 +171,7 @@ const ProductsSection = () => {
                         }
                         type="product"
                         title={product.name}
-                        data={product}
+                        data={{...product, image: product.image || getProductImage(product.name)}}
                       />
                     </CardContent>
                   </Card>
@@ -174,7 +185,7 @@ const ProductsSection = () => {
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl overflow-hidden">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3862623/pexels-photo-3862623.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800"
                 alt="Laboratory engineer analyzing modern equipment"
                 className="w-full h-48 object-cover"
               />

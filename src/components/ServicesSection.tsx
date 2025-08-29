@@ -26,19 +26,22 @@ const ServicesSection = () => {
       icon: <Wrench className="w-8 h-8" />,
       title: "24/7 Emergency Repair",
       description: "Certified technicians dispatched within 2 hours for critical equipment failures across all major brands.",
-      features: ["2-hour response time", "Multi-vendor support", "Genuine OEM parts", "Same-day resolution"]
+      features: ["2-hour response time", "Multi-vendor support", "Genuine OEM parts", "Same-day resolution"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800"
     },
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Preventive Maintenance",
       description: "GMP compliant PM programs with IQ/OQ/PQ qualification services to meet regulatory requirements.",
-      features: ["Annual maintenance contracts", "Performance qualification", "Compliance documentation", "Scheduled calibration"]
+      features: ["Annual maintenance contracts", "Performance qualification", "Compliance documentation", "Scheduled calibration"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800"
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Installation & Qualification",
       description: "Complete installation, validation, and qualification services for new laboratory instrumentation.",
-      features: ["DQ/IQ/OQ/PQ services", "System commissioning", "User training programs", "Compliance validation"]
+      features: ["DQ/IQ/OQ/PQ services", "System commissioning", "User training programs", "Compliance validation"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800"
     }
   ];
 
@@ -46,22 +49,26 @@ const ServicesSection = () => {
     {
       icon: <Microscope className="w-6 h-6" />,
       title: "Chromatography Systems",
-      items: ["HPLC & UHPLC", "GC & GC-MS", "LC-MS/MS", "Ion Chromatography"]
+      items: ["HPLC & UHPLC", "GC & GC-MS", "LC-MS/MS", "Ion Chromatography"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800"
     },
     {
       icon: <Beaker className="w-6 h-6" />,
       title: "Spectroscopy Equipment",
-      items: ["UV-Vis Spectrophotometers", "FTIR Spectrometers", "Atomic Absorption", "ICP-MS"]
+      items: ["UV-Vis Spectrophotometers", "FTIR Spectrometers", "Atomic Absorption", "ICP-MS"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800"
     },
     {
       icon: <FlaskConical className="w-6 h-6" />,
       title: "Environmental Chambers",
-      items: ["Incubators & Ovens", "Stability Chambers", "Autoclaves", "Refrigerators & Freezers"]
+      items: ["Incubators & Ovens", "Stability Chambers", "Autoclaves", "Refrigerators & Freezers"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F9af414ebd20648ad942e05d0c896b7d1?format=webp&width=800"
     },
     {
       icon: <Thermometer className="w-6 h-6" />,
       title: "General Lab Equipment",
-      items: ["Balances & Scales", "Centrifuges", "Water Systems", "Dissolution Testers"]
+      items: ["Balances & Scales", "Centrifuges", "Water Systems", "Dissolution Testers"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fe6abbe4e5dea4339bed3dc71bd91d53d?format=webp&width=800"
     }
   ];
 
@@ -160,7 +167,9 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Design & Planning",
                     description: "Comprehensive laboratory design services ensuring optimal workflow and compliance",
-                    features: ["Custom laboratory layouts", "Workflow optimization", "Regulatory compliance design", "3D visualization & modeling"]
+                    features: ["Custom laboratory layouts", "Workflow optimization", "Regulatory compliance design", "3D visualization & modeling"],
+                    category: "construction",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800"
                   }}
                 />
               </CardContent>
@@ -191,7 +200,9 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Construction & Build",
                     description: "Professional laboratory construction services from foundation to completion",
-                    features: ["Complete lab construction", "Cleanroom installations", "Modular lab systems", "Project management"]
+                    features: ["Complete lab construction", "Cleanroom installations", "Modular lab systems", "Project management"],
+                    category: "construction",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F9af414ebd20648ad942e05d0c896b7d1?format=webp&width=800"
                   }}
                 />
               </CardContent>
@@ -222,7 +233,9 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Infrastructure Setup",
                     description: "Complete infrastructure installation for modern laboratory facilities",
-                    features: ["Electrical installations", "Gas & vacuum systems", "HVAC & ventilation", "Water & waste systems"]
+                    features: ["Electrical installations", "Gas & vacuum systems", "HVAC & ventilation", "Water & waste systems"],
+                    category: "construction",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F23fa8ca88f6c4061a04b386cdf033046?format=webp&width=800"
                   }}
                 />
               </CardContent>
@@ -253,7 +266,9 @@ const ServicesSection = () => {
                   data={{
                     title: "Laboratory Fit-out & Furnishing",
                     description: "Complete laboratory fit-out services with custom furniture and safety equipment",
-                    features: ["Laboratory furniture", "Fume hood installations", "Safety equipment setup", "Equipment positioning"]
+                    features: ["Laboratory furniture", "Fume hood installations", "Safety equipment setup", "Equipment positioning"],
+                    category: "construction",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F74c6c4a711a1457cbba7ffb26da9b4bd?format=webp&width=800"
                   }}
                 />
               </CardContent>
@@ -274,7 +289,7 @@ const ServicesSection = () => {
             <div className="relative group">
               <div className="aspect-video rounded-lg overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/8000529/pexels-photo-8000529.jpeg"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800"
                   alt="Laboratory design and planning blueprints"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -289,7 +304,7 @@ const ServicesSection = () => {
             <div className="relative group">
               <div className="aspect-video rounded-lg overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/7518797/pexels-photo-7518797.jpeg"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F3ec06b2425894bcb8e101743fb5119c6?format=webp&width=800"
                   alt="Modern laboratory interior with equipment"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -304,7 +319,7 @@ const ServicesSection = () => {
             <div className="relative group">
               <div className="aspect-video rounded-lg overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/33603165/pexels-photo-33603165.jpeg"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F9af414ebd20648ad942e05d0c896b7d1?format=webp&width=800"
                   alt="Construction workers building laboratory"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
