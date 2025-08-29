@@ -40,37 +40,37 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="secondary" className="text-sm px-4 py-2">
-                🚨 24/7 Emergency Service Available
+                Design • Build • Fit‑Out
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Multi-Vendor Laboratory
+                  Laboratory Building
                 </span>
                 <br />
-                <span className="text-foreground">Equipment Service & Repair</span>
+                <span className="text-foreground">Construction & Fit‑Out</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Fast, reliable maintenance and repair for HPLC, GC, LC-MS, spectrophotometers, incubators,
-                autoclaves and all laboratory instrumentation. Certified technicians dispatched within 2 hours.
+                End‑to‑end delivery of compliant laboratories: planning, construction, utilities (HVAC, gas, vacuum),
+                cleanrooms, furniture and commissioning. Turnkey projects aligned to regulations and workflows.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">Agilent, Shimadzu, Thermo, Waters</span>
+                <span className="text-sm">Design & planning with compliance</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">IQ/OQ/PQ Qualification Services</span>
+                <span className="text-sm">Construction, cleanrooms & utilities</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">Response Within 2 Hours</span>
+                <span className="text-sm">Fit‑out: furniture, fume hoods, safety</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-secondary" />
-                <span className="text-sm">Nationwide Coverage Kenya</span>
+                <span className="text-sm">Commissioning & handover</span>
               </div>
             </div>
 
@@ -78,16 +78,16 @@ const HeroSection = () => {
               <ServiceQuoteModal
                 trigger={
                   <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                    🚨 Emergency Service Now
+                    Start Your Project
                   </Button>
                 }
-                title="Emergency Service Request"
-                isEmergency={true}
+                title="Construction Project Inquiry"
+                isEmergency={false}
               />
               <ServiceQuoteModal
                 trigger={
                   <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                    Request Quote
+                    Equipment Service & Repair
                   </Button>
                 }
                 title="Service Quote Request"
@@ -116,40 +116,40 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative bg-card rounded-2xl shadow-2xl overflow-hidden border">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fe6abbe4e5dea4339bed3dc71bd91d53d?format=webp&width=800"
-                alt="Laboratory technician working on precision equipment"
+                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800"
+                alt="Laboratory design and construction planning"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl"></div>
               <div className="relative p-8 space-y-6">
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-bold text-primary">Equipment We Service</h3>
-                  <p className="text-muted-foreground">Multi-vendor support & certified technicians</p>
+                  <h3 className="text-2xl font-bold text-primary">Construction Capabilities</h3>
+                  <p className="text-muted-foreground">Turnkey projects from planning to handover</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="p-4 bg-primary/5 rounded-lg">
-                    <div className="text-2xl font-bold text-primary">500+</div>
-                    <div className="text-sm text-muted-foreground">Instrument Models</div>
+                    <div className="text-2xl font-bold text-primary">50+</div>
+                    <div className="text-sm text-muted-foreground">Projects Delivered</div>
                   </div>
                   <div className="p-4 bg-secondary/5 rounded-lg">
-                    <div className="text-2xl font-bold text-secondary">15+</div>
-                    <div className="text-sm text-muted-foreground">OEM Brands</div>
+                    <div className="text-2xl font-bold text-secondary">10+</div>
+                    <div className="text-sm text-muted-foreground">Cleanrooms Built</div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                    <span className="text-sm">HPLC/LC-MS Systems</span>
-                    <Badge variant="secondary">✓ Supported</Badge>
+                    <span className="text-sm">Design & Planning</span>
+                    <Badge variant="secondary">✓ Included</Badge>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                    <span className="text-sm">GC & Spectrophotometers</span>
-                    <Badge variant="secondary">✓ Supported</Badge>
+                    <span className="text-sm">Infrastructure (HVAC, Gas, Power)</span>
+                    <Badge variant="secondary">✓ Included</Badge>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                    <span className="text-sm">Incubators & Autoclaves</span>
-                    <Badge variant="secondary">✓ Supported</Badge>
+                    <span className="text-sm">Fit‑out & Commissioning</span>
+                    <Badge variant="secondary">✓ Included</Badge>
                   </div>
                 </div>
               </div>
