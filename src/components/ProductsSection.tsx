@@ -53,14 +53,14 @@ const ProductsSection = () => {
       { name: "Security Devices", description: "Lab security equipment" }
     ],
     instruments: [
-      { name: "Universal Incubator", description: "Multi-purpose incubation solutions" },
-      { name: "Cooled Storage Incubator", description: "Temperature-controlled storage" },
-      { name: "Cooled Incubator", description: "Precision cooling incubation" },
-      { name: "Peltier Cooled Incubator", description: "Advanced cooling technology" },
-      { name: "CO2 Incubator", description: "Carbon dioxide incubation systems" },
-      { name: "Compressor Cooled Incubator", description: "High-capacity cooling" },
-      { name: "Vacuum Oven", description: "Vacuum drying solutions" },
-      { name: "Universal Oven", description: "General-purpose heating" }
+      { name: "Universal Incubator", description: "Multi-purpose incubation solutions", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Cooled Storage Incubator", description: "Temperature-controlled storage", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Cooled Incubator", description: "Precision cooling incubation", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Peltier Cooled Incubator", description: "Advanced cooling technology", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "CO2 Incubator", description: "Carbon dioxide incubation systems", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Compressor Cooled Incubator", description: "High-capacity cooling", image: "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Vacuum Oven", description: "Vacuum drying solutions", image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Universal Oven", description: "General-purpose heating", image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1200&auto=format&fit=crop" }
     ],
     testing: [
       { name: "Portable Colorimeter", description: "Field color measurement for water analysis" },
@@ -171,7 +171,7 @@ const ProductsSection = () => {
                         }
                         type="product"
                         title={product.name}
-                        data={{...product, image: getProductImage(product.name)}}
+                        data={{...product, image: product.image || getProductImage(product.name)}}
                       />
                     </CardContent>
                   </Card>
