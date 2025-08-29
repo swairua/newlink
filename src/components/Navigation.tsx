@@ -105,14 +105,29 @@ const Navigation = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                <div key={item.name}>
+                  <a
+                    href={item.href}
+                    className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                  {item.children && (
+                    <div className="pl-4 space-y-1">
+                      {item.children.map((child) => (
+                        <a
+                          key={child.name}
+                          href={child.href}
+                          className="block px-3 py-1 text-sm text-muted-foreground hover:text-primary"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          • {child.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="pt-4">
                 <ServiceQuoteModal
