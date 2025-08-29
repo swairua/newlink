@@ -43,14 +43,14 @@ const ProductsSection = () => {
       { name: "Pharmaceutical Items", description: "Pharmaceutical supplies and equipment", image: "https://images.unsplash.com/photo-1584367369853-8b966cf3b4f4?q=80&w=1200&auto=format&fit=crop" }
     ],
     equipment: [
-      { name: "Barcode Label Printers", description: "Professional labeling solutions" },
-      { name: "Thermal Transfer Ribbons", description: "High-quality printing ribbons" },
-      { name: "Barcode Generating Software", description: "Label design and printing software" },
-      { name: "Barcode Scanning Devices", description: "Handheld and fixed scanners" },
-      { name: "Receipt Papers", description: "Thermal receipt papers" },
-      { name: "Ribbons", description: "Printer ribbons and consumables" },
-      { name: "Labels and Tags", description: "Various labeling solutions" },
-      { name: "Security Devices", description: "Lab security equipment" }
+      { name: "Barcode Label Printers", description: "Professional labeling solutions", image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Thermal Transfer Ribbons", description: "High-quality printing ribbons", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Barcode Generating Software", description: "Label design and printing software", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Barcode Scanning Devices", description: "Handheld and fixed scanners", image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Receipt Papers", description: "Thermal receipt papers", image: "https://images.unsplash.com/photo-1515855670271-9676b1c87b9e?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Ribbons", description: "Printer ribbons and consumables", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Labels and Tags", description: "Various labeling solutions", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Security Devices", description: "Lab security equipment", image: "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop" }
     ],
     instruments: [
       { name: "Universal Incubator", description: "Multi-purpose incubation solutions", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
@@ -63,29 +63,29 @@ const ProductsSection = () => {
       { name: "Universal Oven", description: "General-purpose heating", image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1200&auto=format&fit=crop" }
     ],
     testing: [
-      { name: "Portable Colorimeter", description: "Field color measurement for water analysis" },
-      { name: "Chlorimeter Kit", description: "Free/total chlorine testing kit" },
-      { name: "Dissolved Oxygen Meter", description: "Portable DO measurement" },
-      { name: "Arsenator", description: "Arsenic detection systems" },
-      { name: "Compact Turbidity Meter", description: "Water clarity measurement" },
-      { name: "UV-VISIBLE", description: "UV-Visible spectroscopy" },
-      { name: "Spectrophotometers", description: "Optical analysis instruments" },
-      { name: "Standard Comparators", description: "Visual comparison tools" }
+      { name: "Portable Colorimeter", description: "Field color measurement for water analysis", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Chlorimeter Kit", description: "Free/total chlorine testing kit", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Dissolved Oxygen Meter", description: "Portable DO measurement", image: "https://images.unsplash.com/photo-1578496781461-5c6ce9a71173?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Arsenator", description: "Arsenic detection systems", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Compact Turbidity Meter", description: "Water clarity measurement", image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+      { name: "UV-VISIBLE", description: "UV-Visible spectroscopy", image: "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Spectrophotometers", description: "Optical analysis instruments", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Standard Comparators", description: "Visual comparison tools", image: "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop" }
     ],
     reagents: [
-      { name: "Reagents & Standards", description: "High-purity analytical reagents" },
-      { name: "pH Buffers", description: "Buffer solutions for pH calibration" },
-      { name: "Analytical Reagents", description: "Certified analytical standards" },
-      { name: "Analytical Standards", description: "Reference standards for analysis" },
-      { name: "Volumetric Solutions", description: "Precise volumetric reagents" },
-      { name: "General Laboratory Reagents", description: "Common lab chemicals" }
+      { name: "Reagents & Standards", description: "High-purity analytical reagents", image: "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "pH Buffers", description: "Buffer solutions for pH calibration", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Analytical Reagents", description: "Certified analytical standards", image: "https://images.unsplash.com/photo-1581092334651-cfb7a1f4aa69?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Analytical Standards", description: "Reference standards for analysis", image: "https://images.unsplash.com/photo-1581093120690-c83f210e3d42?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Volumetric Solutions", description: "Precise volumetric reagents", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "General Laboratory Reagents", description: "Common lab chemicals", image: "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop" }
     ],
     pharma: [
-      { name: "Microbiology Media", description: "Culture media for microbiology" },
-      { name: "MC Conkey, PDA, XLD", description: "Selective culture media" },
-      { name: "SDA, Transport Media", description: "Specialized growth media" },
-      { name: "Biotechnology Products", description: "Advanced biotech solutions" },
-      { name: "Fermentation Products", description: "Fermentation systems and media" }
+      { name: "Microbiology Media", description: "Culture media for microbiology", image: "https://images.unsplash.com/photo-1581091215367-59ab6dcef1b5?q=80&w=1200&auto=format&fit=crop" },
+      { name: "MC Conkey, PDA, XLD", description: "Selective culture media", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "SDA, Transport Media", description: "Specialized growth media", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Biotechnology Products", description: "Advanced biotech solutions", image: "https://images.unsplash.com/photo-1582719478251-2e7a47f64d5c?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Fermentation Products", description: "Fermentation systems and media", image: "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=1200&auto=format&fit=crop" }
     ]
   };
 
