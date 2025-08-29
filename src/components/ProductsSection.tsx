@@ -63,9 +63,9 @@ const ProductsSection = () => {
       { name: "Universal Oven", description: "General-purpose heating" }
     ],
     testing: [
-      { name: "Photometer 8000", description: "Advanced photometric analysis" },
-      { name: "Photometer 7500", description: "Professional water testing" },
-      { name: "Photometer 7100", description: "Portable testing solutions" },
+      { name: "Portable Colorimeter", description: "Field color measurement for water analysis" },
+      { name: "Chlorimeter Kit", description: "Free/total chlorine testing kit" },
+      { name: "Dissolved Oxygen Meter", description: "Portable DO measurement" },
       { name: "Arsenator", description: "Arsenic detection systems" },
       { name: "Compact Turbidity Meter", description: "Water clarity measurement" },
       { name: "UV-VISIBLE", description: "UV-Visible spectroscopy" },
