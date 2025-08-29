@@ -1,7 +1,7 @@
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { Ruler, Workflow, FileCheck, LayoutGrid, PenTool } from "lucide-react";
+import { Ruler, GitBranch, FileCheck, LayoutGrid, PenTool } from "lucide-react";
 import LearnMoreModal from "./modals/LearnMoreModal";
 
 const LabPlanningSection = () => {
