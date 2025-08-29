@@ -33,14 +33,14 @@ const ProductsSection = () => {
 
   const products = {
     general: [
-      { name: "General Supplies", description: "Basic laboratory consumables and supplies" },
-      { name: "Laboratory Equipment", description: "Essential lab equipment for daily operations" },
-      { name: "Laboratory Chemicals", description: "High-grade chemicals for research" },
-      { name: "Industrial Chemicals", description: "Industrial-grade chemical solutions" },
-      { name: "Research Products", description: "Specialized research equipment and materials" },
-      { name: "Biological Products", description: "Biological specimens and media" },
-      { name: "Hospital Equipment", description: "Medical and hospital-grade equipment" },
-      { name: "Pharmaceutical Items", description: "Pharmaceutical supplies and equipment" }
+      { name: "General Supplies", description: "Basic laboratory consumables and supplies", image: "https://images.unsplash.com/photo-1581093458791-9d4ae6b9a9e3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Laboratory Equipment", description: "Essential lab equipment for daily operations", image: "https://images.unsplash.com/photo-1581091012184-7c54c01a85c3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Laboratory Chemicals", description: "High-grade chemicals for research", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Industrial Chemicals", description: "Industrial-grade chemical solutions", image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Research Products", description: "Specialized research equipment and materials", image: "https://images.unsplash.com/photo-1581091870622-7c71da2d47cd?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Biological Products", description: "Biological specimens and media", image: "https://images.unsplash.com/photo-1581093588401-17b7285f0a3b?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Hospital Equipment", description: "Medical and hospital-grade equipment", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Pharmaceutical Items", description: "Pharmaceutical supplies and equipment", image: "https://images.unsplash.com/photo-1584367369853-8b966cf3b4f4?q=80&w=1200&auto=format&fit=crop" }
     ],
     equipment: [
       { name: "Barcode Label Printers", description: "Professional labeling solutions" },
