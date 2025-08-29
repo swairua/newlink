@@ -18,9 +18,14 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <AboutSection />
+      <LabPlanningSection />
+      <SaferLabsSection />
+      <GasCupboardsSection />
       <ServicesSection />
+      <NewlinkLabServiceSection />
       <ProductsSection />
       <ImageGallerySection />
+      <BlogSection />
       <ContactSection />
       <Footer />
     </div>
