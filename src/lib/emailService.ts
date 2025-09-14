@@ -31,7 +31,7 @@ export interface ContactMessage {
 
 export class EmailService {
   private static readonly DEFAULT_EMAIL = "info@newlinklabservices.co.ke";
-  private static readonly EMERGENCY_EMAIL = "emergency@newlinklabservices.co.ke";
+  private static readonly EMERGENCY_EMAIL = "info@newlinklabservices.co.ke";
 
   /**
    * Send a service request email

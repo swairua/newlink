@@ -84,7 +84,7 @@ const Privacy = () => {
                 <li>You may request access, correction, deletion, or objection/restriction to processing where applicable.</li>
               </ul>
               <p>
-                To exercise rights or raise questions, contact info@newlinklabservices.co.ke. For emergencies: emergency@newlinklabservices.co.ke.
+                To exercise rights or raise questions, contact info@newlinklabservices.co.ke. For emergencies: info@newlinklabservices.co.ke.
               </p>
             </CardContent>
           </Card>

@@ -25,7 +25,7 @@ const ContactPage = () => {
               <CardContent className="space-y-3 text-muted-foreground">
                 <div className="flex items-center gap-2"><Phone className="w-4 h-4" /><span>+254 780 165 490</span></div>
                 <div className="flex items-center gap-2"><Mail className="w-4 h-4" /><span>info@newlinklabservices.co.ke</span></div>
-                <div className="flex items-center gap-2"><Mail className="w-4 h-4" /><span className="text-red-600">emergency@newlinklabservices.co.ke</span></div>
+                <div className="flex items-center gap-2"><Mail className="w-4 h-4" /><span className="text-red-600">info@newlinklabservices.co.ke</span></div>
                 <div className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>P.O Box 36294‑00200, Nairobi, Kenya</span></div>
                 <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Mon–Fri 8:00–18:00 • Emergency 24/7</span></div>
               </CardContent>
