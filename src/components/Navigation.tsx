@@ -8,15 +8,15 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Build", href: "#planning", children: [
-      { name: "Lab Planning", href: "#planning", icon: "Layout" },
-      { name: "Safer labs", href: "#safety", icon: "Shield" },
-      { name: "Gas Cupboards", href: "#gas-cupboards", icon: "Wind" },
-      { name: "Projects", href: "#projects", icon: "Layout" },
-      { name: "Services", href: "#services", icon: "Wrench" },
-      { name: "Blog", href: "#blog", icon: "Book" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about" },
+    { name: "Build", href: "/planning", children: [
+      { name: "Lab Planning", href: "/planning", icon: "Layout" },
+      { name: "Safer labs", href: "/safer-labs", icon: "Shield" },
+      { name: "Gas Cupboards", href: "/gas-cupboards", icon: "Wind" },
+      { name: "Projects", href: "/projects", icon: "Layout" },
+      { name: "Services", href: "/services", icon: "Wrench" },
+      { name: "Blog", href: "/blog", icon: "Book" },
     ]},
     { name: "Contact", href: "/contact" },
   ];
