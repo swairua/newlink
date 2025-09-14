@@ -44,14 +44,14 @@ const HeroSection = () => {
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Laboratory Building
+                  Safer labs
                 </span>
                 <br />
-                <span className="text-foreground">Construction & Fit‑Out</span>
+                <span className="text-foreground">Design • Build • Service</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                End‑to‑end delivery of compliant laboratories: planning, construction, utilities (HVAC, gas, vacuum),
-                cleanrooms, furniture and commissioning. Turnkey projects aligned to regulations and workflows.
+                We deliver safe, efficient laboratories where researchers do their best work: planning and design,
+                construction and utilities, furniture and safety, commissioning and service.
               </p>
             </div>
 
