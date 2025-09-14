@@ -22,17 +22,19 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-background/70 backdrop-blur-md border-b sticky top-0 z-50 w-full overflow-visible">
+    <nav className="bg-background/70 backdrop-blur-md border-b sticky top-0 z-50 w-full overflow-visible" aria-label="Primary">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center h-20 sm:h-28 lg:h-36 min-w-0">
           {/* Logo */}
           <div className="flex-shrink-0 min-w-0">
             <div className="flex items-center">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
-                alt="Newlink Lab Services Ltd - Orchestrating Scientific Solutions"
-                className="h-16 sm:h-24 lg:h-32 w-auto object-contain max-w-[200px] sm:max-w-[300px] lg:max-w-none"
-              />
+              <Link to="/" aria-label="Newlink Lab Services home">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
+                  alt="Newlink Lab Services Ltd - Orchestrating Scientific Solutions"
+                  className="h-16 sm:h-24 lg:h-32 w-auto object-contain max-w-[200px] sm:max-w-[300px] lg:max-w-none"
+                />
+              </Link>
             </div>
           </div>
 
