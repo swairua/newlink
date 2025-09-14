@@ -31,9 +31,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F7731176f5136469ebc928b118220509d%2Fbe7c04bd9bde49ef93b4612d01bef8cd?format=webp&width=800"
                 alt="Newlink Lab Services Ltd"
-                className="h-36 w-auto object-contain brightness-0 invert"
+                className="h-36 w-auto object-contain"
               />
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
