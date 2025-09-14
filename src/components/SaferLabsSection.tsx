@@ -5,13 +5,13 @@ import { Shield, Camera, Box, Wrench, Layers, Package, Wind } from "lucide-react
 import LearnMoreModal from "./modals/LearnMoreModal";
 
 const items = [
-  { title: "Gas Cupboards", icon: <Wind className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800" },
-  { title: "Display cabinet accessories", icon: <Package className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F9af414ebd20648ad942e05d0c896b7d1?format=webp&width=800" },
-  { title: "Nano cameras", icon: <Camera className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800" },
+  { title: "Fume Cupboards", icon: <Wind className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fadba5febae5f4dc191263688c2907132?format=webp&width=800" },
+  { title: "Fume Cupboard Accessories", icon: <Package className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F9af414ebd20648ad942e05d0c896b7d1?format=webp&width=800" },
+  { title: "Nano Chamber", icon: <Camera className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F2d574e1bf20d42c6b3bfd379123ff05d?format=webp&width=800" },
   { title: "Laboratory Tables", icon: <Layers className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fe6abbe4e5dea4339bed3dc71bd91d53d?format=webp&width=800" },
   { title: "Service Systems", icon: <Wrench className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F23fa8ca88f6c4061a04b386cdf033046?format=webp&width=800" },
-  { title: "Storage units", icon: <Box className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800" },
-  { title: "Other Extraction Equipment", icon: <Wind className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800" },
+  { title: "Storage Units", icon: <Box className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fdc3349e2d7864fbe94ea42a6be7475f1?format=webp&width=800" },
+  { title: "Other Extraction Systems", icon: <Wind className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2Fa6cbd484a34e492c9ce6437fdacd3775?format=webp&width=800" },
   { title: "Laboratory Accessories", icon: <Package className="w-5 h-5" />, img: "https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F74c6c4a711a1457cbba7ffb26da9b4bd?format=webp&width=800" },
 ];
 
