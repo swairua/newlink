@@ -5,10 +5,16 @@ import { Button } from "@/components/ui/button";
 import ServiceQuoteModal from "@/components/modals/ServiceQuoteModal";
 import ContactModal from "@/components/modals/ContactModal";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact | Newlink Lab Services"
+        description="Contact Newlink Lab Services. We respond within 2 hours during business times. Emergency support is 24/7."
+        image="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=1200"
+      />
       <Navigation />
       <section id="contact" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">

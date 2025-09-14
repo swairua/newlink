@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectsSection from "@/components/ProjectsSection";
+import SEO from "@/components/SEO";
 
 const ProjectsPage = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Projects | Newlink Lab Services"
+        description="Integrated laboratory projects delivered end‑to‑end: planning, construction and commissioning."
+        image="https://cdn.builder.io/api/v1/image/assets%2F14ef2fdbcfb242f3b9b974b49e20f798%2F356eaac87e534266a3db84684b4b56a2?format=webp&width=1200"
+      />
       <Navigation />
       <section className="relative">
         <div className="h-72 md:h-96 w-full overflow-hidden">
