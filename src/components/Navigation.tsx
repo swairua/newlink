@@ -13,6 +13,7 @@ const Navigation = () => {
       { name: "Lab Planning", href: "#planning", icon: "Layout" },
       { name: "Safer labs", href: "#safety", icon: "Shield" },
       { name: "Gas Cupboards", href: "#gas-cupboards", icon: "Wind" },
+      { name: "Projects", href: "#projects", icon: "Layout" },
       { name: "Services", href: "#services", icon: "Wrench" },
       { name: "Blog", href: "#blog", icon: "Book" },
     ]},
