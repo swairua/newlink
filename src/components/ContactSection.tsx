@@ -33,7 +33,7 @@ const ContactSection = () => {
             </div>
             <div className="flex items-center justify-center space-x-2">
               <span className="font-semibold">Email:</span>
-              <span>emergency@newlinklabservices.co.ke</span>
+              <span>info@newlinklabservices.co.ke</span>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                 <div className="space-y-2">
                   <div className="font-medium">info@newlinklabservices.co.ke</div>
                   <div className="text-sm text-muted-foreground">Service requests & general inquiries</div>
-                  <div className="font-medium text-red-600">emergency@newlinklabservices.co.ke</div>
+                  <div className="font-medium text-red-600">info@newlinklabservices.co.ke</div>
                   <div className="text-sm text-muted-foreground">Emergency service requests</div>
                 </div>
               </CardContent>
