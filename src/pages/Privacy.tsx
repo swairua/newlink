@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Privacy Policy | Newlink Lab Services"
+        description="Privacy Policy for Newlink Lab Services Limited."
+        noIndex={true}
+      />
       <Navigation />
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
