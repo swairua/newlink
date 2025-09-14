@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const posts: Record<string, { title: string; image: string; content: string[] }>
  = {
@@ -52,6 +53,17 @@ const BlogPost = () => {
 
   return (
     <article className="py-24">
+      <SEO
+        title={`${post.title} | Newlink Lab Services`}
+        description={post.content[0]}
+        image={post.image}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          image: post.image,
+        }}
+      />
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-8">
           <Badge variant="secondary" className="text-sm px-4 py-2">Insights</Badge>
