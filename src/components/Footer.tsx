@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Mail, MapPin, Clock } from "lucide-react";
 import ServiceQuoteModal from "./modals/ServiceQuoteModal";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -130,15 +131,15 @@ const Footer = () => {
             © {currentYear} Newlink Lab Services Limited. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-background/70 hover:text-background transition-colors">
+            <Link to="/privacy" className="text-background/70 hover:text-background transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-background/70 hover:text-background transition-colors">
+            </Link>
+            <Link to="/terms" className="text-background/70 hover:text-background transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-background/70 hover:text-background transition-colors">
+            </Link>
+            <Link to="/contact" className="text-background/70 hover:text-background transition-colors">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>
