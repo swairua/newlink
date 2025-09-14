@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import ServiceQuoteModal from "./modals/ServiceQuoteModal";
 
 const Navigation = () => {
@@ -17,7 +18,7 @@ const Navigation = () => {
       { name: "Services", href: "#services", icon: "Wrench" },
       { name: "Blog", href: "#blog", icon: "Book" },
     ]},
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -40,20 +41,20 @@ const Navigation = () => {
             <div className="flex items-baseline space-x-4 xl:space-x-8">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href.startsWith("#") ? `/${item.href}` : item.href}
                     className="flex items-center gap-1 text-foreground hover:text-primary transition-colors duration-300 px-2 py-2 text-sm font-medium whitespace-nowrap"
                   >
                     {item.name}
                     {item.children && (
                       <svg className="w-4 h-4 transition-transform group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
                     )}
-                  </a>
+                  </Link>
                   {item.children && (
                     <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 mt-2 w-[520px] max-w-[92vw] bg-background border rounded-xl shadow-xl p-4 transition-all z-[60] origin-top-right">
                       <div className="grid grid-cols-2 gap-3">
                         {item.children.map((child) => (
-                          <a key={child.name} href={child.href} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50">
+                          <Link key={child.name} to={child.href.startsWith("#") ? `/${child.href}` : child.href} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50">
                             {/* simple icon set via inline svg based on name */}
                             <div className="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center">
                               {child.icon === "Layout" && (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>)}
@@ -66,7 +67,7 @@ const Navigation = () => {
                               <div className="font-medium text-sm">{child.name}</div>
                               <div className="text-xs text-muted-foreground">{child.name === 'Lab Planning' ? 'Layouts & compliance' : child.name === 'Safer labs' ? 'Furniture & extraction' : child.name === 'Gas Cupboards' ? 'Fume hoods & safety' : child.name === 'Services' ? 'Repair & maintenance' : 'Articles & updates'}</div>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -106,24 +107,24 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t">
               {navItems.map((item) => (
                 <div key={item.name}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href.startsWith("#") ? `/${item.href}` : item.href}
                     className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                   {item.children && (
                     <div className="pl-4 space-y-1">
                       {item.children.map((child) => (
-                        <a
+                        <Link
                           key={child.name}
-                          href={child.href}
+                          to={child.href.startsWith("#") ? `/${child.href}` : child.href}
                           className="block px-3 py-1 text-sm text-muted-foreground hover:text-primary"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           • {child.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
